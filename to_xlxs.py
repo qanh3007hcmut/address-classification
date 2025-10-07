@@ -6,7 +6,7 @@ from utils.data import get_data, get_prefix_dict
 from utils.trie import build_all_automaton, trie_pipeline
 from utils.preprocess import to_normalized
 from utils.fuzz import fuzz_pipeline
-from utils.input import preprocess_input, select_candidate
+from utils.input import preprocess_input, select_candidate_by_order_administrative
 sys.path.append("test")
 
 # Load data
@@ -31,8 +31,7 @@ for i, case in enumerate(tests, start=1):
     start = time.perf_counter_ns()
     result = trie_pipeline(input_text, AUTOMATON)
     result = fuzz_pipeline(input_text, result)
-    if len(result) > 1:    
-        result = select_candidate(result, preprocess_input(input_text).split(","))
+    result = select_candidate_by_order_administrative(result, preprocess_input(input_text).split(","))
        
     result = result[0][0]
     time_exec = (time.perf_counter_ns() - start) * 10**(-9)

@@ -1,6 +1,7 @@
 from typing import Literal
 from utils.preprocess import to_diacritics, to_normalized, to_nospace
 from utils.input import preprocess_input
+
 def build_automaton(
     dictionary: list[str], 
     address_type: Literal["provinces", " districts", "wards"],
@@ -171,14 +172,14 @@ def score(
     for _, base_score, current, pref, org in components:
         if current:
             address_sc += base_score
-            if processor == "normalized":
-                diacritic_sc += count_diacritics(current)
+            # if processor == "normalized":
+            #     diacritic_sc += count_diacritics(current)
             if org:
                 size_total += len(org)
                 normalized_input = to_normalized(current)
                 diacritics_input = to_diacritics(normalized_input)
                 nospace_input = to_nospace(diacritics_input)
-                if normalized_input in org:
+                if normalized_input in org and normalized_input != diacritics_input:
                     addr_detected_sc += processor_dict["normalized"]
                     diacritic_sc += count_diacritics(normalized_input) * processor_dict["normalized"]
                 elif diacritics_input in org:
@@ -282,7 +283,8 @@ def classify_with_trie(
                     groups[case] = [output]
 
     # return sorted([val for val in groups.values()], key=lambda x: x[2], reverse=True)
-    return [val for vals in groups.values() for val in vals]
+    # return [val for vals in groups.values() for val in vals]
+    return candidates
 
 
 def trie_pipeline(
@@ -301,7 +303,7 @@ def trie_pipeline(
         normalized_score,
         normalized_origin
     ) in normalized_outputs:
-        if all(normalized_address) and all(normalized_prefix):
+        if all(normalized_address) and all(normalized_prefix) and not normalized_remaining:
             return [(
                 normalized_address,
                 normalized_remaining,
@@ -398,15 +400,16 @@ def trie_pipeline(
     from itertools import groupby
     # _, group = next(groupby(trie_results, key=lambda x: x[3]))
     # best_results = list(group)
+    # return best_results
+    
     groups = groupby(trie_results, key=lambda x: x[3])
     top_groups = []
     max_sc = 0
-    for i, (score, group) in enumerate(groups):
-        if i >= 2: 
-            break
+    for score, group in groups:
         max_sc = max(max_sc , score)
-        if score >= max_sc - 100:
+        if score >= max_sc - 160:
             top_groups.extend(list(group))
+        else: break
 
     return top_groups
     

@@ -2,7 +2,7 @@ from utils.data import get_data, get_prefix_dict
 from utils.fuzz import fuzz_pipeline
 from utils.preprocess import to_diacritics, to_normalized, to_nospace
 from utils.trie import count_diacritics, score, build_all_automaton, check_automaton, classify_with_trie, detect_with_last, trie_pipeline
-from utils.input import normalize_input, preprocess_input, replace_alias, add_comma_before_administrative, select_candidate
+from utils.input import normalize_input, preprocess_input, replace_alias, add_comma_before_administrative, select_candidate_by_order_administrative, select_candidate_by_order_administrative_v2
 
 DATA = get_data()
 PREFIX = get_prefix_dict()
@@ -11,8 +11,16 @@ AUTOMATON = build_all_automaton(DATA, PREFIX)
 import time
 start = time.perf_counter_ns()
 
-input = "Thôn Thành Bắc, Xã Quảng Thành, TP Thanh Hoá, Thanh Hoá"
+input = "XPhớc Vĩnh Đông Cần Giuộc T.Long AN"
+print(preprocess_input(input))
+
 tests = [
+    "T.T.H",
+    "P4 T.Ph9ốĐông Hà",
+    "Mỹ Hòa xã Mỹ Long, H.Cai Lậy, Tiền Giang", # 265
+    "T. Phước Trạch 2 Ea Phê, Krông Păc, Đắk Lắk", # 259
+    "PhườngNguyễn Trãi, T.P Kon Tum, T Kon Tum",
+    " Muyện Châu Thành TỉnhĐồng Tháp",
     "Thôn Xuân Lũng Bình Trung, Cao Lộc, Lạng Sơn", # 240 order
     "Tổ 8, Ấp An Bình Minh Hòa, Châu Thành, Kiên Giang", # 246 order
     "Khóm 1,Thị Trấn Tam Bình, Vĩnh Long", # 249 prefix ko khớp output
@@ -52,24 +60,21 @@ tests = [
     "200 Thích Qunarg Đức X.Yên Phong Tỉnh Bắc Kạn"
 ]
 
-for raw in tests:
-    print(preprocess_input(raw))
+# for raw in tests:
+#     print(preprocess_input(raw))
     # print(raw, "\n", 5*" ", "->", add_comma_before_administrative(replace_alias(raw)))
 
 outputs = trie_pipeline(input, AUTOMATON)
-end = time.perf_counter_ns() - start
-print(f"{end * 10**(-9): .9f}")
+end_trie = time.perf_counter_ns() - start
 
 fuzz_output = fuzz_pipeline(input, outputs)
-end = time.perf_counter_ns() - start
-print(f"{end * 10**(-9): .9f}")
+end_fuzz = time.perf_counter_ns() - start
 
-print(preprocess_input(input).split(","))
-output = select_candidate(fuzz_output, preprocess_input(input).split(","))
-end = time.perf_counter_ns() - start
-print(f"{end * 10**(-9): .9f}")
+output = select_candidate_by_order_administrative(fuzz_output, input)
+# output = select_candidate_by_order_administrative_v2(fuzz_output, preprocess_input(input))
+end_order = time.perf_counter_ns() - start
 
-print("-"*5, "TRIE", "-"*5)
+print("-"*5, "TRIE", "-"*5, f"{end_trie * 10**(-9): .9f}")
 [print(out) for out in outputs]
 print("-"*5, "FUZZ", "-"*5)
 [print(out) for out in fuzz_output]
@@ -83,7 +88,7 @@ print("-"*5, "RAW INPUT SELECT", "-"*5)
 # outputs = score(PREFIX, (None, 'Hương Thủy', 'Thủy Châu'), (None, 'tx', 'p'),'thuathue', "nospace", (None, None, 'Thủy Châu'), "diacritics")
 # input = "Sơn Hà"
 # outputs = check_automaton(AUTOMATON["normalized"]["districts"], to_normalized(input))
-print(detect_with_last(AUTOMATON["diacritics"]["districts"], to_diacritics(to_normalized(preprocess_input(input))), None, None, None))
+# print(detect_with_last(AUTOMATON["diacritics"]["districts"], to_diacritics(to_normalized(preprocess_input(input))), None, None, None))
 # print(
 #     score(
 #         PREFIX,

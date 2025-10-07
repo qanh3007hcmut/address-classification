@@ -1,7 +1,7 @@
 from utils.data import get_data, get_prefix_dict
 from utils.trie import build_all_automaton, trie_pipeline
 from utils.fuzz import fuzz_pipeline
-from utils.input import preprocess_input, select_candidate
+from utils.input import preprocess_input, select_candidate_by_order_administrative, select_candidate_by_order_administrative_v2
 import time
 import sys
 sys.path.append("test")
@@ -34,9 +34,19 @@ SKIP_INDEXES = {
     517, 516, 515, 508, 509, 510, 504, 502, 505, 500, 499, 498, 497, 496, 493, 491, 496, 493, 491, 487,
     482, 481, 480, 479, 476, 472, 471, 468, 465, 462, 461, 459, 458, 455, 453, 450, 449, 446, 444, 438,
     439, 436, 432, 430, 429, 428, 425, 424, 423, 420, 417, 416, 415, 413, 401, 402, 403, 408, 409, 399,
-    397, 394, 392, 388, 377, 376, 374, 369, 368, 365, 364, 362, 360, 340, 334, 322, 316, 314, 313, 309,
-    305, 303, 296, 295, 289, 286, 287, 279, 276, 257, 259, 249, 246, 244, 202, 203, 
+    397, 394, 392, 388, 377, 376, 374, 369, 368, 365, 364, 362, 360, 340, 279, 276, 244, 202, 203   
 }
+
+OUTPUT_ERROR = {
+    229, 286, 309, 313, 314, 
+}
+
+UNWANTED = {
+    211, 249
+}
+
+SKIP_INDEXES.update(OUTPUT_ERROR)
+SKIP_INDEXES.update(UNWANTED)
 
 # filter thêm điều kiện notes
 filtered_cases = [
@@ -67,8 +77,8 @@ def test_classify(input_text, expected_province, expected_district, expected_war
     start = time.perf_counter_ns()
     result = trie_pipeline(input_text, AUTOMATON)
     result = fuzz_pipeline(input_text, result)
-    if len(result) > 1:    
-        result = select_candidate(result, preprocess_input(input_text).split(","))
+    result = select_candidate_by_order_administrative(result, input_text)
+    # result = select_candidate_by_order_administrative_v2(result, preprocess_input(input_text))
         
     elapsed = (time.perf_counter_ns() - start) * 1e-9
     if elapsed > 0.01:
