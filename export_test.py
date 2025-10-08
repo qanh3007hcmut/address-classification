@@ -38,22 +38,18 @@ filtered_cases = [
 results = []
 
 for i, input_text, expected_province, expected_district, expected_ward, notes in filtered_cases:
-    start = time.perf_counter_ns()
-    result = trie_pipeline(input_text, AUTOMATON)
-    result = fuzz_pipeline(input_text, result)
-    result = select_candidate_by_order_administrative(result, input_text)
-    
-    test_result = {
-        "id": i,
-        "raw_input": input_text,
-        "preprocess_input": preprocess_input(input_text),
-        "output": result[0][0],
-        "input": result[0][4],
-        "remaining" : result[0][1],
+    test = {
+        "text": input_text,
+        "result": {
+            "province": expected_province,
+            "district": expected_district,
+            "ward": expected_ward
+        },
+        "notes": notes
     }
-    results.append(test_result)
+    results.append(test)
 
-with open("exports/test_results.json", "w", encoding="utf-8") as f:
+with open("exports/tests.json", "w", encoding="utf-8") as f:
     json.dump(results, f, ensure_ascii=False, indent=4)
 
-print(f"Results saved to test_results.json")
+print(f"Results saved to test.json")

@@ -40,8 +40,8 @@ def normalize_input(s: str) -> str:
     s = s.strip()
     s = re.sub(r",\s*", ", ", s)                 
     s = re.sub(r"([a-zđ])([A-ZĐ])", r"\1 \2", s)
-    # chèn space giữa chữ và số, bất kể hướng nào
-    s = re.sub(r"(?<=[a-zA-Z])(?=\d)|(?<=\d)(?=[a-zA-Z])", " ", s)
+    s = re.sub(r"(?<![qp])(?<=[^\d\s])\d(?=[^\d\s])", "", s, flags=re.IGNORECASE)
+    s = re.sub(r"(?<=[a-zA-Zà-ỹđĐ])(?=\d)|(?<=\d)(?=[a-zA-Zà-ỹđĐ])", " ", s)
     s = re.sub(r"\.\s*", ". ", s)                  
     s = re.sub(r"\s+", " ", s)   
              
@@ -96,6 +96,7 @@ def add_comma_before_administrative(text: str) -> str:
 def final_normalize(s:str):
     # Bỏ số 1-2 chữ số không đứng sau "quận" hoặc "phường"
     s = re.sub(r"(?<!quận\s)(?<!phường\s)\b\d{1,2}\b", "", s, flags=re.IGNORECASE)
+    s = re.sub(r"\.", " ", s)      
     s = re.sub(r"\s+", " ", s)      
     return s.strip()
 
@@ -109,7 +110,7 @@ def preprocess_input(text: str) -> str:
     """Chuẩn hóa input: lowercase, space hợp lý, tách số và chữ."""
     text = normalize_input(text)
     text = replace_alias(text)
-    text = add_comma_before_administrative(text)
+    # text = add_comma_before_administrative(text)
     text = final_normalize(text)
     # text = partial_select(text)
     return text

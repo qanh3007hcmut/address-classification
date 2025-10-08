@@ -33,6 +33,41 @@ def to_normalized(address: str):
     # gom lại, loại bớt khoảng trắng thừa
     return " ".join("".join(res).split())
 
+def to_normalized_no_comma_deleted(address: str):
+    import unicodedata
+
+    address = address.lower()
+    res = []
+    number = []
+
+    def flush_number():
+        """Đưa số ra res nếu hợp lệ, ngược lại bỏ qua"""
+        nonlocal number
+        if number:
+            num_str = "".join(number)
+            if len(num_str) < 3 and not (len(num_str) == 2 and int(num_str) > 61):
+                res.append(num_str)
+            number = []
+
+    for ch in address:
+        if ch in {".", "-", "/"}:
+            flush_number()
+            res.append(" ")  # thay bằng khoảng trắng
+        elif ch.isdigit():
+            number.append(ch)
+        else:
+            cat = unicodedata.category(ch)
+            if cat.startswith("L") or ch.isspace():
+                flush_number()
+                res.append(ch)
+            # ký tự khác thì bỏ qua
+
+    # xử lý nếu kết thúc bằng số
+    flush_number()
+
+    # gom lại, loại bớt khoảng trắng thừa
+    return " ".join("".join(res).split())
+
 def to_diacritics(address : str) :
     import unicodedata
     nfkd_form = unicodedata.normalize('NFD', address)

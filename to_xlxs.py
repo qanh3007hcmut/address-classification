@@ -68,5 +68,5 @@ for i, case in enumerate(tests, start=1):
 
 # Save to Excel
 df = pd.DataFrame(rows)
-df.to_excel("test_results.xlsx", index=False, engine="openpyxl")
+df.to_excel("exports/test_results.xlsx", index=False, engine="openpyxl")
 print("✅ Exported to test_results.xlsx")

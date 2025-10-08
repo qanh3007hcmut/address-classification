@@ -1,7 +1,8 @@
 [
     {
         "id": 202,
-        "raw_input": "357/, ng-t- thuật, phường 1, quận 3, thành phố hồchíminh.",
+        "raw_input": "357/28,Ng-T- Thuật,P1,Q3,TP.HồChíMinh.",
+        "preprocess_input": "357/, ng-t- thuật, phường 1, quận 3, thành phố hồchíminh.",
         "output": [
             "Hồ Chí Minh",
             "3",
@@ -16,7 +17,8 @@
     },
     {
         "id": 203,
-        "raw_input": "284 dbis ng văn giáo, phường 3, mỹ tho, tỉnh giang.",
+        "raw_input": "284DBis Ng Văn Giáo, P3, Mỹ Tho, T.Giang.",
+        "preprocess_input": "284 dbis ng văn giáo, phường 3, mỹ tho, tỉnh giang.",
         "output": [
             null,
             "Mỹ Tho",
@@ -31,7 +33,8 @@
     },
     {
         "id": 244,
-        "raw_input": "154// nguyễn - phúc chu, phường 15, tb, thành phố hồ chí minh",
+        "raw_input": "154/4/81 Nguyễn - Phúc Chu, P15, TB, TP. Hồ Chí Minh",
+        "preprocess_input": "154// nguyễn - phúc chu, phường 15, tb, thành phố hồ chí minh",
         "output": [
             "Hồ Chí Minh",
             null,
@@ -46,7 +49,8 @@
     },
     {
         "id": 276,
-        "raw_input": "/ nguyễn - thượng hiền, phường 5, bt, thành phố hồ chí minh",
+        "raw_input": "55/30 Nguyễn - Thượng Hiền,P5,BT, TP. Hồ Chí Minh",
+        "preprocess_input": "/ nguyễn - thượng hiền, phường 5, bt, thành phố hồ chí minh",
         "output": [
             "Hồ Chí Minh",
             null,
@@ -61,7 +65,8 @@
     },
     {
         "id": 279,
-        "raw_input": "trịnh văn cấn, phường c-ô-lãnh, quận 1, thành phố hồ chí minh",
+        "raw_input": "8 Trịnh Văn Cấn P.C-Ô-Lãnh, Q.1, TP. Hồ Chí Minh",
+        "preprocess_input": "trịnh văn cấn, phường c-ô-lãnh, quận 1, thành phố hồ chí minh",
         "output": [
             "Hồ Chí Minh",
             "1",
@@ -76,7 +81,8 @@
     },
     {
         "id": 340,
-        "raw_input": "f b phan văn tr, phường 5, gv, thành phố hồ chí minh",
+        "raw_input": "F2B PhanVănTr P.5,GV,TP.Hồ Chí Minh",
+        "preprocess_input": "f b phan văn tr, phường 5, gv, thành phố hồ chí minh",
         "output": [
             "Hồ Chí Minh",
             null,
@@ -91,7 +97,8 @@
     },
     {
         "id": 360,
-        "raw_input": "xã trà sơn, huyện trà bồng, tỉnh quảng m ngãi",
+        "raw_input": "X. Trà Sơn,Huyện Trà Bồng,T.Quảng mNgãi",
+        "preprocess_input": "xã trà sơn, huyện trà bồng, tỉnh quảng m ngãi",
         "output": [
             null,
             "Trà Bồng",
@@ -106,7 +113,8 @@
     },
     {
         "id": 362,
-        "raw_input": "van điểm, huyện hường tlín, thành phốha nội",
+        "raw_input": "Van Điểm, H hường TLín, Thành phốHa Nội",
+        "preprocess_input": "van điểm, huyện hường tlín, thành phốha nội",
         "output": [
             "Hà Nội",
             null,
@@ -121,7 +129,8 @@
     },
     {
         "id": 364,
-        "raw_input": "xthạnh đức, hgò dầ6 u, tỉnh tây ninh",
+        "raw_input": "XThạnh Đức, HGò Dầ6u, T Tây Ninh",
+        "preprocess_input": "xthạnh đức, hgò dầ6 u, tỉnh tây ninh",
         "output": [
             "Tây Ninh",
             null,
@@ -136,7 +145,8 @@
     },
     {
         "id": 365,
-        "raw_input": "xã thài phìn tủng, huyện đồgg van, hà gxiang",
+        "raw_input": "X.Thài Phìn Tủng, Huyện ĐồGg Van,  Hà Gxiang",
+        "preprocess_input": "xã thài phìn tủng, huyện đồgg van, hà gxiang",
         "output": [
             null,
             null,
@@ -151,7 +161,8 @@
     },
     {
         "id": 368,
-        "raw_input": "huyện nqm đàn, nghệ an",
+        "raw_input": ",H.Nqm Đàn, nghệ An",
+        "preprocess_input": "huyện nqm đàn, nghệ an",
         "output": [
             "Nghệ An",
             null,
@@ -166,7 +177,8 @@
     },
     {
         "id": 369,
-        "raw_input": "huyện nam trực, nam đị8 nh",
+        "raw_input": ", H Nam Trực, Nam Đị8nh",
+        "preprocess_input": "huyện nam trực, nam đị8 nh",
         "output": [
             null,
             "Nam Trực",
@@ -181,7 +193,8 @@
     },
     {
         "id": 374,
-        "raw_input": "xã cam bình, thành fhốcam rah, khánh hòa",
+        "raw_input": "X Cam Bình, Thành FhốCam Rah,  Khánh Hòa",
+        "preprocess_input": "xã cam bình, thành fhốcam rah, khánh hòa",
         "output": [
             "Khánh Hòa",
             null,
@@ -196,7 +209,8 @@
     },
     {
         "id": 376,
-        "raw_input": "minh tân, huyện lưng tai,",
+        "raw_input": " Minh Tân,h.Lưng Tai,",
+        "preprocess_input": "minh tân, huyện lưng tai,",
         "output": [
             null,
             null,
@@ -211,7 +225,8 @@
     },
     {
         "id": 377,
-        "raw_input": "xãquỳn lâm, huyện quỳnh phụ, thai bình",
+        "raw_input": "XãQuỳn1 Lâm, H. Quỳnh Phụ,  Thai Bình",
+        "preprocess_input": "xãquỳn lâm, huyện quỳnh phụ, thai bình",
         "output": [
             "Thái Bình",
             "Quỳnh Phụ",
@@ -226,7 +241,8 @@
     },
     {
         "id": 388,
-        "raw_input": "đông giang, tỉnh quảyg nm",
+        "raw_input": "  Đông Giang T Quảyg Nm",
+        "preprocess_input": "đông giang, tỉnh quảyg nm",
         "output": [
             null,
             "Đông Giang",
@@ -241,7 +257,8 @@
     },
     {
         "id": 392,
-        "raw_input": "xgia hội, huyện văn chấn, tỉnh yên kbái",
+        "raw_input": "XGia Hội,h.Văn Chấn,TỉnhYênKBái",
+        "preprocess_input": "xgia hội, huyện văn chấn, tỉnh yên kbái",
         "output": [
             null,
             "Văn Chấn",
@@ -256,7 +273,8 @@
     },
     {
         "id": 394,
-        "raw_input": "xã ho dng quỳ, , hanh hóa",
+        "raw_input": "X. HoDng Quỳ,,9hanh Hóa",
+        "preprocess_input": "xã ho dng quỳ, , hanh hóa",
         "output": [
             null,
             null,
@@ -271,7 +289,8 @@
     },
     {
         "id": 397,
-        "raw_input": "fhim lam điện biê",
+        "raw_input": "FHim Lam   Điện Biê",
+        "preprocess_input": "fhim lam điện biê",
         "output": [
             null,
             null,
@@ -286,7 +305,8 @@
     },
     {
         "id": 399,
-        "raw_input": "bảin sen, huyện mường khương, tỉnh lào cai",
+        "raw_input": " BảIn Sen H Mường Khương T5Lào Cai",
+        "preprocess_input": "bảin sen, huyện mường khương, tỉnh lào cai",
         "output": [
             "Lào Cai",
             "Mường Khương",
@@ -301,7 +321,8 @@
     },
     {
         "id": 401,
-        "raw_input": "xãv ninh, kiên xương,",
+        "raw_input": "XãV Ninh, Kiên Xương,",
+        "preprocess_input": "xãv ninh, kiên xương,",
         "output": [
             null,
             "Kiến Xương",
@@ -316,7 +337,8 @@
     },
     {
         "id": 402,
-        "raw_input": "thành phố biên hòa, tỉnh đyng nai",
+        "raw_input": " TP Biên Hòa TỉnhĐyng Nai",
+        "preprocess_input": "thành phố biên hòa, tỉnh đyng nai",
         "output": [
             null,
             "Biên Hòa",
@@ -331,7 +353,8 @@
     },
     {
         "id": 403,
-        "raw_input": "xã trà dvưong bắc trà my tquảg nam",
+        "raw_input": "X. Trà DVưong Bắc Trà My TQuảg Nam",
+        "preprocess_input": "xã trà dvưong bắc trà my tquảg nam",
         "output": [
             null,
             "Bắc Trà My",
@@ -346,7 +369,8 @@
     },
     {
         "id": 408,
-        "raw_input": "xã quỳnh nuyên, tỉnh thái bình",
+        "raw_input": "X Quỳnh Nuyên,,T. Thái Bình",
+        "preprocess_input": "xã quỳnh nuyên, tỉnh thái bình",
         "output": [
             "Thái Bình",
             null,
@@ -361,7 +385,8 @@
     },
     {
         "id": 409,
-        "raw_input": "xvnh hung, tỉnh thanh hóa",
+        "raw_input": "XVnh Hung, , T.Thanh Hóa",
+        "preprocess_input": "xvnh hung, tỉnh thanh hóa",
         "output": [
             "Thanh Hóa",
             null,
@@ -376,7 +401,8 @@
     },
     {
         "id": 413,
-        "raw_input": ", huyện maỹ lộc, tỉnh d nam định",
+        "raw_input": ", Huyện Maỹ Lộc, TỉnhD Nam Định",
+        "preprocess_input": ", huyện maỹ lộc, tỉnh d nam định",
         "output": [
             "Nam Định",
             null,
@@ -391,7 +417,8 @@
     },
     {
         "id": 415,
-        "raw_input": "thị trấn qu nhất, , tỉnh nam định",
+        "raw_input": "TT Qu7 Nhất,,Tỉnh Nam Định",
+        "preprocess_input": "thị trấn qu nhất, , tỉnh nam định",
         "output": [
             "Nam Định",
             null,
@@ -406,7 +433,8 @@
     },
     {
         "id": 416,
-        "raw_input": "qx. tân hưng tây, ph tân,",
+        "raw_input": "QX.Tân Hưng Tây, Ph8 Tân,",
+        "preprocess_input": "qx. tân hưng tây, ph tân,",
         "output": [
             null,
             null,
@@ -421,7 +449,8 @@
     },
     {
         "id": 417,
-        "raw_input": ", huyện cẩm thủy, tỉnh thanh hóca",
+        "raw_input": ", Huyện Cẩm Thủy, T.Thanh Hóca",
+        "preprocess_input": ", huyện cẩm thủy, tỉnh thanh hóca",
         "output": [
             null,
             "Cẩm Thủy",
@@ -436,7 +465,8 @@
     },
     {
         "id": 420,
-        "raw_input": "xan thủy, huyện lệe thủy tquảng bình",
+        "raw_input": "XAn Thủy Huyện Lệe Thủy TQuảng Bình",
+        "preprocess_input": "xan thủy, huyện lệe thủy tquảng bình",
         "output": [
             "Quảng Bình",
             null,
@@ -451,7 +481,8 @@
     },
     {
         "id": 423,
-        "raw_input": "xhòa bqc, hdi linh,",
+        "raw_input": "XHòa Bqc, HDi Linh, ",
+        "preprocess_input": "xhòa bqc, hdi linh,",
         "output": [
             null,
             "Di Linh",
@@ -466,7 +497,8 @@
     },
     {
         "id": 424,
-        "raw_input": "cộng hòa, , tỉnh ha oi dương",
+        "raw_input": " Cộng Hòa,,TỉnhHaOi Dương",
+        "preprocess_input": "cộng hòa, , tỉnh ha oi dương",
         "output": [
             null,
             null,
@@ -481,7 +513,8 @@
     },
     {
         "id": 425,
-        "raw_input": "đai tan, huyện đại ộc, tỉnh quảng nam",
+        "raw_input": "Đai TanHuyện Đại ộc,TỉnhQuảng Nam",
+        "preprocess_input": "đai tan, huyện đại ộc, tỉnh quảng nam",
         "output": [
             "Quảng Nam",
             null,
@@ -496,7 +529,8 @@
     },
     {
         "id": 428,
-        "raw_input": "xã sùng phài, thành phố zai châu, tỉnh lai châu",
+        "raw_input": "X Sùng Phài T.P zai Châu T.Lai Châu",
+        "preprocess_input": "xã sùng phài, thành phố zai châu, tỉnh lai châu",
         "output": [
             "Lai Châu",
             null,
@@ -511,7 +545,8 @@
     },
     {
         "id": 429,
-        "raw_input": "an lowng phú giáo tbinh dương",
+        "raw_input": " An Lowng Phú Giáo TBinh Dương",
+        "preprocess_input": "an lowng phú giáo tbinh dương",
         "output": [
             "Bình Dương",
             "Phú Giáo",
@@ -526,7 +561,8 @@
     },
     {
         "id": 430,
-        "raw_input": "xã tân thịnh yiên bái, tỉnh yên bái",
+        "raw_input": "X Tân7 Thịnh  Yiên Bái T. yên Bái",
+        "preprocess_input": "xã tân thịnh yiên bái, tỉnh yên bái",
         "output": [
             "Yên Bái",
             null,
@@ -541,7 +577,8 @@
     },
     {
         "id": 432,
-        "raw_input": "hải an hải lăng tqdung trị",
+        "raw_input": " Hải An  Hải Lăng TQdung trị",
+        "preprocess_input": "hải an hải lăng tqdung trị",
         "output": [
             null,
             "Hải Lăng",
@@ -556,7 +593,8 @@
     },
     {
         "id": 436,
-        "raw_input": ", bảo lâ. , tỉnh cao bằng",
+        "raw_input": ",Bảo Lâ.,Tỉnh Cao Bằng",
+        "preprocess_input": ", bảo lâ. , tỉnh cao bằng",
         "output": [
             "Cao Bằng",
             null,
@@ -571,7 +609,8 @@
     },
     {
         "id": 438,
-        "raw_input": "xã chê la, tỉnh hà gian z",
+        "raw_input": "X.Chê La,,T.Hà GianZ",
+        "preprocess_input": "xã chê la, tỉnh hà gian z",
         "output": [
             null,
             null,
@@ -586,7 +625,8 @@
     },
     {
         "id": 439,
-        "raw_input": "hôno sỹ, tỉnh cao bằng",
+        "raw_input": "Hôno Sỹ  Tỉnh Cao Bằng",
+        "preprocess_input": "hôno sỹ, tỉnh cao bằng",
         "output": [
             "Cao Bằng",
             null,
@@ -601,7 +641,8 @@
     },
     {
         "id": 444,
-        "raw_input": "phường hiệ an, thị xã kinh môn, tỉnh hải dương",
+        "raw_input": "Phường Hiệ An, T.X.Kinh Môn, TỉnhHải Dương",
+        "preprocess_input": "phường hiệ an, thị xã kinh môn, tỉnh hải dương",
         "output": [
             "Hải Dương",
             "Kinh Môn",
@@ -616,7 +657,8 @@
     },
     {
         "id": 446,
-        "raw_input": "xãchiềng mu ng, tỉnh stn la",
+        "raw_input": "XãChiềng Mu5ng  T.stn la",
+        "preprocess_input": "xãchiềng mu ng, tỉnh stn la",
         "output": [
             null,
             null,
@@ -631,7 +673,8 @@
     },
     {
         "id": 449,
-        "raw_input": "phường trần hưng đao, phủ ly, tỉnh huyện nam",
+        "raw_input": "F. Trần Hưng Đao,Phủ Ly,TỉnhH  Nam",
+        "preprocess_input": "phường trần hưng đao, phủ ly, tỉnh huyện nam",
         "output": [
             null,
             "Phủ Lý",
@@ -646,7 +689,8 @@
     },
     {
         "id": 450,
-        "raw_input": "tông lạnh, huyện thuận chru tsơn la",
+        "raw_input": "Tông Lạnh H.Thuận Chru TSơn La",
+        "preprocess_input": "tông lạnh, huyện thuận chru tsơn la",
         "output": [
             null,
             "Sơn La",
@@ -661,7 +705,8 @@
     },
     {
         "id": 453,
-        "raw_input": "phường xuân lam, thuận thành, tỉnh bắc ninh",
+        "raw_input": "P.Xuân Lam, Thuận Thành, T.Bắc Ninh",
+        "preprocess_input": "phường xuân lam, thuận thành, tỉnh bắc ninh",
         "output": [
             "Bắc Ninh",
             "Thuận Thành",
@@ -676,7 +721,8 @@
     },
     {
         "id": 455,
-        "raw_input": "long thắng, huyn lai ung,",
+        "raw_input": " Long Thắng, Huyn Lai ung, ",
+        "preprocess_input": "long thắng, huyn lai ung,",
         "output": [
             null,
             null,
@@ -691,7 +737,8 @@
     },
     {
         "id": 458,
-        "raw_input": "bằng lng, tỉnh bắc kạn",
+        "raw_input": " Bằng Lng,,T.Bắc Kạn",
+        "preprocess_input": "bằng lng, tỉnh bắc kạn",
         "output": [
             "Bắc Kạn",
             null,
@@ -706,7 +753,8 @@
     },
     {
         "id": 459,
-        "raw_input": "huyệntân biên, tỉnh tdy ninh",
+        "raw_input": " Huyệntân biên T.TDy Ninh",
+        "preprocess_input": "huyệntân biên, tỉnh tdy ninh",
         "output": [
             null,
             "Tân Biên",
@@ -721,7 +769,8 @@
     },
     {
         "id": 461,
-        "raw_input": "xã tân an, huyện thnh hà,",
+        "raw_input": "X. Tân An, HuyệnThnh Hà, ",
+        "preprocess_input": "xã tân an, huyện thnh hà,",
         "output": [
             null,
             null,
@@ -736,7 +785,8 @@
     },
     {
         "id": 462,
-        "raw_input": "xãtr bung thanh, , tthanh hóa",
+        "raw_input": "XãtrBung Thanh,,TThanh Hóa",
+        "preprocess_input": "xãtr bung thanh, , tthanh hóa",
         "output": [
             "Thanh Hóa",
             null,
@@ -751,7 +801,8 @@
     },
     {
         "id": 465,
-        "raw_input": "xã nâm ntừ nậm pồ",
+        "raw_input": "Xã Nâm Ntừ  Nậm Pồ ",
+        "preprocess_input": "xã nâm ntừ nậm pồ",
         "output": [
             null,
             "Nậm Pồ",
@@ -766,7 +817,8 @@
     },
     {
         "id": 468,
-        "raw_input": "cẩm lương hcẩm thủa, tỉnh thanh hóa",
+        "raw_input": " Cẩm Lương HCẩm Thủa T. Thanh Hóa",
+        "preprocess_input": "cẩm lương hcẩm thủa, tỉnh thanh hóa",
         "output": [
             "Thanh Hóa",
             null,
@@ -781,7 +833,8 @@
     },
     {
         "id": 471,
-        "raw_input": "hướng hiệp đa krông, tỉnh quảng tr z",
+        "raw_input": " Hướng Hiệp  Đa Krông T Quảng TrZ",
+        "preprocess_input": "hướng hiệp đa krông, tỉnh quảng tr z",
         "output": [
             null,
             "Đa Krông",
@@ -796,7 +849,8 @@
     },
     {
         "id": 472,
-        "raw_input": "phường ea tam, thành phố buôn ma thuột tỉn đắk llk",
+        "raw_input": "P Ea Tam T.P Buôn Ma Thuột TỉnĐắk Llk",
+        "preprocess_input": "phường ea tam, thành phố buôn ma thuột tỉn đắk llk",
         "output": [
             null,
             "Buôn Ma Thuột",
@@ -811,7 +865,8 @@
     },
     {
         "id": 476,
-        "raw_input": "xã vị tân vị than",
+        "raw_input": "Xã Vị Tân  Vị Than ",
+        "preprocess_input": "xã vị tân vị than",
         "output": [
             null,
             null,
@@ -826,7 +881,8 @@
     },
     {
         "id": 479,
-        "raw_input": "xã bình hi, tỉnh quảcg nam",
+        "raw_input": "X Bình Hi, , T.Quảcg Nam",
+        "preprocess_input": "xã bình hi, tỉnh quảcg nam",
         "output": [
             null,
             null,
@@ -841,7 +897,8 @@
     },
     {
         "id": 480,
-        "raw_input": "xãnân chính, huyện ly nhân, tỉnh ha nam",
+        "raw_input": "XãNân Chính, H Ly Nhân, Tỉnh HaNam",
+        "preprocess_input": "xãnân chính, huyện ly nhân, tỉnh ha nam",
         "output": [
             "Hà Nam",
             "Lý Nhân",
@@ -856,7 +913,8 @@
     },
     {
         "id": 481,
-        "raw_input": "khả cửu, huyện thanh srn,",
+        "raw_input": " Khả cửu, H. Thanh Srn, ",
+        "preprocess_input": "khả cửu, huyện thanh srn,",
         "output": [
             null,
             "Yên Thành",
@@ -871,7 +929,8 @@
     },
     {
         "id": 482,
-        "raw_input": ", đông hòa, tỉnh phú yn",
+        "raw_input": ", Đông Hòa,Tỉnh Phú yn",
+        "preprocess_input": ", đông hòa, tỉnh phú yn",
         "output": [
             null,
             "Đông Hòa",
@@ -886,7 +945,8 @@
     },
     {
         "id": 487,
-        "raw_input": "phường lo wng binh, thành phố thủ đưc, thành phố hồ chí minh",
+        "raw_input": "F.LoWng Binh, TpThủ Đưc, TPHCM",
+        "preprocess_input": "phường lo wng binh, thành phố thủ đưc, thành phố hồ chí minh",
         "output": [
             "Hồ Chí Minh",
             "Thủ Đức",
@@ -901,7 +961,8 @@
     },
     {
         "id": 491,
-        "raw_input": "xã hải minh, , n am định",
+        "raw_input": "X. Hải Minh,,N5am Định",
+        "preprocess_input": "xã hải minh, , n am định",
         "output": [
             "Nam Định",
             null,
@@ -916,7 +977,8 @@
     },
     {
         "id": 493,
-        "raw_input": "bạch lưu, huyện song lô, vĩnh pghúc",
+        "raw_input": "Bạch Lưu, H.Song Lô, Vĩnh PGhúc",
+        "preprocess_input": "bạch lưu, huyện song lô, vĩnh pghúc",
         "output": [
             null,
             "Sông Lô",
@@ -931,7 +993,8 @@
     },
     {
         "id": 496,
-        "raw_input": "xã sơn thy, huyện le thủy, tỉnh quảng bình",
+        "raw_input": "Xa Sơn Thy H. Le Thủy Tỉnh Quảng Bình",
+        "preprocess_input": "xã sơn thy, huyện le thủy, tỉnh quảng bình",
         "output": [
             "Quảng Bình",
             "Lệ Thủy",
@@ -946,7 +1009,8 @@
     },
     {
         "id": 497,
-        "raw_input": "xã nam thai a, azbiên, tỉnh kiên giang",
+        "raw_input": "x. Nam Thai A, AZBiên,Tỉnh Kiên Giang",
+        "preprocess_input": "xã nam thai a, azbiên, tỉnh kiên giang",
         "output": [
             "Kiên Giang",
             null,
@@ -961,7 +1025,8 @@
     },
     {
         "id": 498,
-        "raw_input": "phường quảng thọ, thành phố sầm swn, ty. thanh hóa",
+        "raw_input": "P. Quảng Thọ,T.P Sầm Swn,TY. thanh Hóa",
+        "preprocess_input": "phường quảng thọ, thành phố sầm swn, ty. thanh hóa",
         "output": [
             "Thanh Hóa",
             null,
@@ -976,7 +1041,8 @@
     },
     {
         "id": 499,
-        "raw_input": "đông htòa phu yên",
+        "raw_input": " Đông Htòa Phu Yên",
+        "preprocess_input": "đông htòa phu yên",
         "output": [
             "Phú Yên",
             null,
@@ -991,7 +1057,8 @@
     },
     {
         "id": 500,
-        "raw_input": "tam amnh nzm núi thành tquảng nam",
+        "raw_input": " Tam Amnh NZm  Núi Thành TQuảng Nam",
+        "preprocess_input": "tam amnh nzm núi thành tquảng nam",
         "output": [
             "Quảng Nam",
             "Núi Thành",
@@ -1006,7 +1073,8 @@
     },
     {
         "id": 502,
-        "raw_input": "phường phong cnốc th, ị xãquảng yên, tỉnh quảng ninh",
+        "raw_input": "P. Phong CNốc Th,ị xãQuảng Yên t. Quảng Ninh",
+        "preprocess_input": "phường phong cnốc th, ị xãquảng yên, tỉnh quảng ninh",
         "output": [
             "Quảng Ninh",
             "Quảng Yên",
@@ -1021,7 +1089,8 @@
     },
     {
         "id": 504,
-        "raw_input": "nghi sơ6 n, thị xã nghi sơn, thhanh hóa",
+        "raw_input": "Nghi Sơ6n, T.X. Nghi Sơn, Thhanh Hóa",
+        "preprocess_input": "nghi sơ6 n, thị xã nghi sơn, thhanh hóa",
         "output": [
             null,
             "Nghi Sơn",
@@ -1036,7 +1105,8 @@
     },
     {
         "id": 505,
-        "raw_input": ", thăng fbìh, tỉnh quảng nam",
+        "raw_input": ", ThăngFBìh,T. Quảng Nam",
+        "preprocess_input": ", thăng fbìh, tỉnh quảng nam",
         "output": [
             "Quảng Nam",
             null,
@@ -1051,7 +1121,8 @@
     },
     {
         "id": 508,
-        "raw_input": "xã terường thịnh, huyện ứng hòa, hà nội",
+        "raw_input": "X. TErường Thịnh,h Ứng Hòa, Hà Nội",
+        "preprocess_input": "xã terường thịnh, huyện ứng hòa, hà nội",
         "output": [
             "Hà Nội",
             "Ứng Hòa",
@@ -1066,7 +1137,8 @@
     },
     {
         "id": 509,
-        "raw_input": "xã huyện mỗ, đan ph tượng,",
+        "raw_input": "X.H Mỗ, Đan PhTượng,",
+        "preprocess_input": "xã huyện mỗ, đan ph tượng,",
         "output": [
             null,
             "Yên Mô",
@@ -1081,7 +1153,8 @@
     },
     {
         "id": 510,
-        "raw_input": "xã tiến nông, huyện trệu sơn, tỉnh thanh hóa",
+        "raw_input": "Xã Tiến Nông,H Trệu Sơn,T. Thanh Hóa",
+        "preprocess_input": "xã tiến nông, huyện trệu sơn, tỉnh thanh hóa",
         "output": [
             "Thanh Hóa",
             null,
@@ -1096,7 +1169,8 @@
     },
     {
         "id": 515,
-        "raw_input": "xã tân son, hchợ qmới,",
+        "raw_input": "X.Tân Son,hchợ QMới,",
+        "preprocess_input": "xã tân son, hchợ qmới,",
         "output": [
             null,
             "Tân Sơn",
@@ -1111,7 +1185,8 @@
     },
     {
         "id": 516,
-        "raw_input": "quách phẩm bắc, , cà mzu",
+        "raw_input": "Quách Phẩm Bắc, , Cà Mzu",
+        "preprocess_input": "quách phẩm bắc, , cà mzu",
         "output": [
             null,
             null,
@@ -1126,7 +1201,8 @@
     },
     {
         "id": 517,
-        "raw_input": "xã tvực đạo, , nam định",
+        "raw_input": "X Tvực Đạo, , Nam Định",
+        "preprocess_input": "xã tvực đạo, , nam định",
         "output": [
             "Nam Định",
             null,
@@ -1141,7 +1217,8 @@
     },
     {
         "id": 519,
-        "raw_input": "xã lộc thah, tỉnh , phường bảo lộc, tlâm đông",
+        "raw_input": "X. Lộc Thah,T0P Bảo lộc,TLâm Đông",
+        "preprocess_input": "xã lộc thah, tỉnh , phường bảo lộc, tlâm đông",
         "output": [
             "Lâm Đồng",
             null,
@@ -1156,7 +1233,8 @@
     },
     {
         "id": 521,
-        "raw_input": "xã vạn kim, huyện mỹ đức, thành phố hnội",
+        "raw_input": "xã Vạn Kim, HuyệnMỹ Đức, T.P HNội",
+        "preprocess_input": "xã vạn kim, huyện mỹ đức, thành phố hnội",
         "output": [
             null,
             "Mỹ Đức",
@@ -1171,7 +1249,8 @@
     },
     {
         "id": 522,
-        "raw_input": "xmiền đồi, la zc sơn,",
+        "raw_input": "XMiền Đồi,LaZc Sơn,",
+        "preprocess_input": "xmiền đồi, la zc sơn,",
         "output": [
             null,
             null,
@@ -1186,7 +1265,8 @@
     },
     {
         "id": 523,
-        "raw_input": "xã phu mãn hà nội",
+        "raw_input": "X Phu Mãn   HN",
+        "preprocess_input": "xã phu mãn hà nội",
         "output": [
             "Hà Nội",
             null,
@@ -1201,7 +1281,8 @@
     },
     {
         "id": 525,
-        "raw_input": "xã mường lèo, huyện sốp cộp, tỉnh sơn ma",
+        "raw_input": "X Mường Lèo H Sốp Cộp T Sơn ma",
+        "preprocess_input": "xã mường lèo, huyện sốp cộp, tỉnh sơn ma",
         "output": [
             null,
             "Sốp Cộp",
@@ -1216,7 +1297,8 @@
     },
     {
         "id": 530,
-        "raw_input": "xtâm thsắng cư jút, tỉnh đắk nông",
+        "raw_input": "XTâm Thsắng Cư Jút TỉnhĐắk Nông",
+        "preprocess_input": "xtâm thsắng cư jút, tỉnh đắk nông",
         "output": [
             "Đắk Nông",
             "Cư Jút",
@@ -1231,7 +1313,8 @@
     },
     {
         "id": 532,
-        "raw_input": "xã hòa trị huzyen hú hoa tphú yên",
+        "raw_input": "X.Hòa Trị Huzyen hú Hoa TPhú Yên",
+        "preprocess_input": "xã hòa trị huzyen hú hoa tphú yên",
         "output": [
             "Phú Yên",
             null,
@@ -1246,7 +1329,8 @@
     },
     {
         "id": 536,
-        "raw_input": "xã bok tới, huyện hoài ân bìh định",
+        "raw_input": "X. Bok Tới H Hoài Ân  Bìh Định",
+        "preprocess_input": "xã bok tới, huyện hoài ân bìh định",
         "output": [
             null,
             "Hoài Ân",
@@ -1261,7 +1345,8 @@
     },
     {
         "id": 541,
-        "raw_input": "tinh nhu, huyện thanh sơn, tỉnh phú tho",
+        "raw_input": "Tinh Nhu Huyện Thanh Sơn Tỉnh Phú Tho",
+        "preprocess_input": "tinh nhu, huyện thanh sơn, tỉnh phú tho",
         "output": [
             "Phú Thọ",
             "Thanh Sơn",
@@ -1276,7 +1361,8 @@
     },
     {
         "id": 548,
-        "raw_input": "phường nhi thu, thị xã cửa lò tnghệ an",
+        "raw_input": "P. Nhi Thu Thị xã Cửa Lò TNghệ An",
+        "preprocess_input": "phường nhi thu, thị xã cửa lò tnghệ an",
         "output": [
             "Nghệ An",
             "Cửa Lò",
@@ -1291,7 +1377,8 @@
     },
     {
         "id": 549,
-        "raw_input": "phường dịch vọng c/giấy thành phốhànội",
+        "raw_input": "F.Dịch Vọng  C/Giấy Thành phốHàNội",
+        "preprocess_input": "phường dịch vọng c/giấy thành phốhànội",
         "output": [
             "Hà Nội",
             null,
@@ -1306,7 +1393,8 @@
     },
     {
         "id": 554,
-        "raw_input": "xã sơn hv hsơn hoa, tỉnh phú yên",
+        "raw_input": "X. Sơn Hv HSơn Hoa Tỉnh Phú Yên",
+        "preprocess_input": "xã sơn hv hsơn hoa, tỉnh phú yên",
         "output": [
             "Phú Yên",
             null,
@@ -1321,7 +1409,8 @@
     },
     {
         "id": 555,
-        "raw_input": "xã bản my, huyện . hoàng su phì, tỉnh hà giang",
+        "raw_input": "Xã Bản My H..Hoàng Su Phì T.Hà Giang",
+        "preprocess_input": "xã bản my, huyện . hoàng su phì, tỉnh hà giang",
         "output": [
             "Hà Giang",
             "Hoàng Su Phì",
@@ -1336,7 +1425,8 @@
     },
     {
         "id": 557,
-        "raw_input": "xãchơ chun, huyện nami giang, tỉnh quảng nam",
+        "raw_input": "XãChơ Chun, H NamiGiang, T.Quảng Nam",
+        "preprocess_input": "xãchơ chun, huyện nami giang, tỉnh quảng nam",
         "output": [
             "Quảng Nam",
             null,
@@ -1351,7 +1441,8 @@
     },
     {
         "id": 560,
-        "raw_input": "quỳ châu, tỉnh nsghệ an",
+        "raw_input": "  Quỳ Châu T.NSghệ An",
+        "preprocess_input": "quỳ châu, tỉnh nsghệ an",
         "output": [
             null,
             "Quỳ Châu",
@@ -1366,7 +1457,8 @@
     },
     {
         "id": 561,
-        "raw_input": "huyện văn giang, tỉnh hưng yê0",
+        "raw_input": " H.Văn Giang Tỉnh Hưng Yê0",
+        "preprocess_input": "huyện văn giang, tỉnh hưng yê0",
         "output": [
             null,
             "Văn Giang",
@@ -1381,7 +1473,8 @@
     },
     {
         "id": 567,
-        "raw_input": "eăn tiến, yên lạc, vĩnh, phường 0 húc",
+        "raw_input": " eăn Tiến, Yên Lạc, vĩnh P0húc",
+        "preprocess_input": "eăn tiến, yên lạc, vĩnh, phường 0 húc",
         "output": [
             null,
             "Yên Lạc",
@@ -1396,7 +1489,8 @@
     },
     {
         "id": 569,
-        "raw_input": "xã cẩm hoàng, tỉnh hải dươnwg",
+        "raw_input": "X.Cẩm Hoàng,,T. Hải Dươnwg",
+        "preprocess_input": "xã cẩm hoàng, tỉnh hải dươnwg",
         "output": [
             null,
             null,
@@ -1411,7 +1505,8 @@
     },
     {
         "id": 574,
-        "raw_input": "xã c. hâu minh, hhiệp ha, tbắc giang",
+        "raw_input": "Xã C.hâu Minh, HHiệp Ha, TBắc Giang",
+        "preprocess_input": "xã c. hâu minh, hhiệp ha, tbắc giang",
         "output": [
             null,
             "Bắc Giang",
@@ -1426,7 +1521,8 @@
     },
     {
         "id": 576,
-        "raw_input": "diên thạnh, tỉnh khabnh hòa",
+        "raw_input": "Diên Thạnh,,T Khabnh Hòa",
+        "preprocess_input": "diên thạnh, tỉnh khabnh hòa",
         "output": [
             null,
             null,
@@ -1441,7 +1537,8 @@
     },
     {
         "id": 582,
-        "raw_input": "đứ lợi, huyện mộ đức, tỉnh quản ngãi",
+        "raw_input": "Đứ Lợi,H Mộ Đức,TỉnhQuản Ngãi",
+        "preprocess_input": "đứ lợi, huyện mộ đức, tỉnh quản ngãi",
         "output": [
             null,
             "Mộ Đức",
@@ -1456,7 +1553,8 @@
     },
     {
         "id": 590,
-        "raw_input": "xã kiên thành, huyện trấn yên, tỉnh yên bi",
+        "raw_input": "Xã Kiên Thành H Trấn Yên T.yên Bi",
+        "preprocess_input": "xã kiên thành, huyện trấn yên, tỉnh yên bi",
         "output": [
             null,
             "Trấn Yên",
@@ -1471,7 +1569,8 @@
     },
     {
         "id": 593,
-        "raw_input": "xthạch xuâ, thạch hà, tỉnh hà tĩnh",
+        "raw_input": "XThạch Xuâ,Thạch Hà,T. Hà Tĩnh",
+        "preprocess_input": "xthạch xuâ, thạch hà, tỉnh hà tĩnh",
         "output": [
             "Hà Tĩnh",
             "Thạch Hà",
@@ -1486,7 +1585,8 @@
     },
     {
         "id": 594,
-        "raw_input": "quận 1, thành phố huyện c. minh",
+        "raw_input": " Quận 1 T.P H.C.Minh",
+        "preprocess_input": "quận 1, thành phố huyện c. minh",
         "output": [
             null,
             "1",
@@ -1501,7 +1601,8 @@
     },
     {
         "id": 598,
-        "raw_input": "xã văn cẩs, huyện hung hà tthái bình",
+        "raw_input": "x. Văn Cẩs HuyệnHung Hà Tthái Bình",
+        "preprocess_input": "xã văn cẩs, huyện hung hà tthái bình",
         "output": [
             "Thái Bình",
             "Hưng Hà",
@@ -1516,7 +1617,8 @@
     },
     {
         "id": 600,
-        "raw_input": "oã bnh ngọc, thành phố tuy hoà, tỉnhphú yên",
+        "raw_input": "oã Bnh Ngọc,T.Phố Tuy Hoà,Tỉnhphú Yên",
+        "preprocess_input": "oã bnh ngọc, thành phố tuy hoà, tỉnhphú yên",
         "output": [
             "Phú Yên",
             "Tuy Hoà",
@@ -1531,7 +1633,8 @@
     },
     {
         "id": 603,
-        "raw_input": "thành phố phan rang-tháp lhàm ninh thuận",
+        "raw_input": " T.P Phan Rang-Tháp lhàm  Ninh Thuận",
+        "preprocess_input": "thành phố phan rang-tháp lhàm ninh thuận",
         "output": [
             "Ninh Thuận",
             null,
@@ -1546,7 +1649,8 @@
     },
     {
         "id": 604,
-        "raw_input": ", tân phươc, tin gjiang",
+        "raw_input": ", Tân Phươc, Tin GJiang",
+        "preprocess_input": ", tân phươc, tin gjiang",
         "output": [
             null,
             "Tân Phước",
@@ -1561,7 +1665,8 @@
     },
     {
         "id": 606,
-        "raw_input": "xtrung kiên, , tỉnh vĩnh phuúc",
+        "raw_input": "XTrung Kiên,,Tỉnh Vĩnh Phuúc",
+        "preprocess_input": "xtrung kiên, , tỉnh vĩnh phuúc",
         "output": [
             null,
             "Vinh",
@@ -1576,7 +1681,8 @@
     },
     {
         "id": 611,
-        "raw_input": "yn phú, hbắc mê, tỉnh v hà giang",
+        "raw_input": " Yn phú, HBắc Mê, TỉnhV Hà giang",
+        "preprocess_input": "yn phú, hbắc mê, tỉnh v hà giang",
         "output": [
             "Hà Giang",
             "Bắc Mê",
@@ -1591,7 +1697,8 @@
     },
     {
         "id": 617,
-        "raw_input": "phú đô, huyện phú lươnz",
+        "raw_input": "Phú Đô HuyệnPhú Lươnz ",
+        "preprocess_input": "phú đô, huyện phú lươnz",
         "output": [
             null,
             null,
@@ -1606,7 +1713,8 @@
     },
     {
         "id": 618,
-        "raw_input": "thái ha, hba vì, thành phố hnội",
+        "raw_input": " Thái Ha, HBa Vì, T.pHNội",
+        "preprocess_input": "thái ha, hba vì, thành phố hnội",
         "output": [
             null,
             "Ba Vì",
@@ -1621,7 +1729,8 @@
     },
     {
         "id": 620,
-        "raw_input": "xhuy hạ, phù yêu, tỉnh sơn la",
+        "raw_input": "XHuy Hạ,  phù Yêu, T.Sơn La",
+        "preprocess_input": "xhuy hạ, phù yêu, tỉnh sơn la",
         "output": [
             "Sơn La",
             null,
@@ -1636,7 +1745,8 @@
     },
     {
         "id": 622,
-        "raw_input": ", nam đông, tỉnh tỉnh tỉnh huyện",
+        "raw_input": ", Nam Đông,T. T.T.H",
+        "preprocess_input": ", nam đông, tỉnh tỉnh tỉnh huyện",
         "output": [
             null,
             "Nam Đông",
@@ -1651,7 +1761,8 @@
     },
     {
         "id": 630,
-        "raw_input": "bản ho jn, huyện tam đường, tỉnh lai châu",
+        "raw_input": " bản HoJn huyện Tam Đường Tỉnh Lai Châu",
+        "preprocess_input": "bản ho jn, huyện tam đường, tỉnh lai châu",
         "output": [
             "Lai Châu",
             "Tam Đường",
@@ -1666,7 +1777,8 @@
     },
     {
         "id": 634,
-        "raw_input": "bắc trà my, tỉnh quảng na hm",
+        "raw_input": "  Bắc Trà My TỉnhQuảng NaHm",
+        "preprocess_input": "bắc trà my, tỉnh quảng na hm",
         "output": [
             null,
             "Bắc Trà My",
@@ -1681,7 +1793,8 @@
     },
     {
         "id": 639,
-        "raw_input": "đông thanh an e minh, tỉnh kien giang",
+        "raw_input": "Đông thanh AnE Minh T kien Giang",
+        "preprocess_input": "đông thanh an e minh, tỉnh kien giang",
         "output": [
             "Kiên Giang",
             null,
@@ -1696,7 +1809,8 @@
     },
     {
         "id": 641,
-        "raw_input": "phường thủy châu, thị xã hương thủy, thừa., tỉnh huế",
+        "raw_input": "P Thủy Châu,T.X. hươngThủy,Thừa.t.Huế",
+        "preprocess_input": "phường thủy châu, thị xã hương thủy, thừa., tỉnh huế",
         "output": [
             null,
             "Hương Thủy",
@@ -1711,7 +1825,8 @@
     },
     {
         "id": 644,
-        "raw_input": "xã nga thanh hyện nga son, tỉnh thanh, quận hóa",
+        "raw_input": "X.Nga Thanh hyện Nga son TỉnhThanhQ Hóa",
+        "preprocess_input": "xã nga thanh hyện nga son, tỉnh thanh, quận hóa",
         "output": [
             null,
             "Nga Sơn",
@@ -1726,7 +1841,8 @@
     },
     {
         "id": 646,
-        "raw_input": ", lệ thủy, tỉnh quảng bìn kh",
+        "raw_input": ",Lệ Thủy,T quảng BìnKh",
+        "preprocess_input": ", lệ thủy, tỉnh quảng bìn kh",
         "output": [
             null,
             "Lệ Thủy",

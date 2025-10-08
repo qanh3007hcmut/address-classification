@@ -11,13 +11,13 @@ AUTOMATON = build_all_automaton(DATA, PREFIX)
 import time
 start = time.perf_counter_ns()
 
-input = "XPhớc Vĩnh Đông Cần Giuộc T.Long AN"
+input = "Thái Ha, HBa Vì, T.pHNội"
 print(preprocess_input(input))
 
 tests = [
     "T.T.H",
     "P4 T.Ph9ốĐông Hà",
-    "Mỹ Hòa xã Mỹ Long, H.Cai Lậy, Tiền Giang", # 265
+    "Mỹ Hòa xã Mỹ Long, H.Cai Laậy, Tiền Giang", # 265
     "T. Phước Trạch 2 Ea Phê, Krông Păc, Đắk Lắk", # 259
     "PhườngNguyễn Trãi, T.P Kon Tum, T Kon Tum",
     " Muyện Châu Thành TỉnhĐồng Tháp",
@@ -76,9 +76,9 @@ end_order = time.perf_counter_ns() - start
 
 print("-"*5, "TRIE", "-"*5, f"{end_trie * 10**(-9): .9f}")
 [print(out) for out in outputs]
-print("-"*5, "FUZZ", "-"*5)
+print("-"*5, "FUZZ", "-"*5, f"{end_fuzz * 10**(-9): .9f}")
 [print(out) for out in fuzz_output]
-print("-"*5, "RAW INPUT SELECT", "-"*5)
+print("-"*5, "RAW INPUT SELECT", "-"*5, f"{end_order * 10**(-9): .9f}")
 [print(out) for out in output]
 # outputs = classify_with_trie(input, AUTOMATON, "normalized")
 # outputs = classify_with_trie('p thanh xuan q 12', AUTOMATON, "diacritics", ('Hồ Chí Minh', None, None), 277)
