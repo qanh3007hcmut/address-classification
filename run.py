@@ -1,16 +1,25 @@
-from utils.bktree import build_BKTree, search_bktree
+from math import exp
 from utils.data import get_data, get_prefix_dict    
-from utils.input import preprocess_input
+from utils.input_v2 import preprocess_input
 from utils.preprocess import to_normalized
 from utils.trie import build_all_automaton
-from utils.trie_pipeline_v2 import check_automaton, classify_pipeline, full_pipeline, spelling_detect, window_slide
+from utils.trie_pipeline_v2 import check_automaton, full_pipeline, spelling_detect, window_slide
 from utils.spelling_error_pipeline import extract_address_components, find_match, create_list
-from utils.address_matcher import find_best_match_advanced, build_bk_trees
+from utils.bktree import build_bk_trees
 import time
+import json
+
+with open("test/latest_test.json", "r", encoding="utf-8") as f:
+    tests = json.load(f)
+test_inputs = [case["text"] for case in tests]
+expected_province = [case["result"]["province"] for case in tests]
+expected_district = [case["result"]["district"] for case in tests]
+expected_ward = [case["result"]["ward"] for case in tests]
+
 DATA = get_data()
 PREFIX = get_prefix_dict()
 AUTOMATON = build_all_automaton(DATA, PREFIX)
-BKTREE = build_bk_trees(DATA)
+BKTREE = build_bk_trees(DATA, PREFIX["full"]["normalized"], to_normalized)
 tests = [
     ("T.T.H", "thừa thiên huế"),
     ("P4 T.Ph9ốĐông Hà", ""),
@@ -65,12 +74,16 @@ tests = [
         
 import time
 start = time.perf_counter_ns()
-input = preprocess_input("Đông thanh AnE Minh T kien Giang")
+id = 521
+raw_input = test_inputs[id - 1]
+input = preprocess_input(raw_input)
+print("RAW_INPUT", "-"*5, raw_input)
 print("PREPROCESS_INPUT", "-"*5, input)
 output = full_pipeline(input, AUTOMATON, BKTREE)
 print("-"*5, f"{(time.perf_counter_ns() - start) * 10**(-9): .9f}","-"*5)
-print(output)
 
+print(output[0], output[1], output[2])
+print(expected_province[id-1], expected_district[id-1], expected_ward[id-1])
 # output = check_automaton(AUTOMATON["normalized"]["wards"], "Tỉnh Lạng5 Sơn".lower())
 
 # province_prefixes = ['', 'thành phố', 'thanh pho', 'thanhpho', 'tp', 'tp.', 't.p', 't', 'thnàh phố', 'thànhphố', 'tỉnh', 'tinh', 't.', 'tí', 'tinhf', 'tin', 'tnh', 't.phố', 't phố', 't.pho', 't pho']

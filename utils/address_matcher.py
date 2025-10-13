@@ -33,26 +33,6 @@ class BKTree:
         self.tree_type = tree_type  # "districts", "wards", "provinces", or "generic"
         self.size = 0
     
-    def levenshtein_distance(self, s1: str, s2: str) -> int:
-        """Calculate Levenshtein distance between two strings"""
-        if len(s1) < len(s2):
-            s1, s2 = s2, s1
-        
-        if len(s2) == 0:
-            return len(s1)
-        
-        previous_row = list(range(len(s2) + 1))
-        for i, c1 in enumerate(s1):
-            current_row = [i + 1]
-            for j, c2 in enumerate(s2):
-                insertions = previous_row[j + 1] + 1
-                deletions = current_row[j] + 1
-                substitutions = previous_row[j] + (c1 != c2)
-                current_row.append(min(insertions, deletions, substitutions))
-            previous_row = current_row
-        
-        return previous_row[-1]
-    
     def normalize_text(self, text: str) -> str:
         """Normalize Vietnamese text for better matching"""
         # Remove extra spaces and convert to lowercase
@@ -233,4 +213,3 @@ def find_best_match_advanced(input_string: str, bk_tree_type: Literal['provinces
     # 2. Then by word count (higher is better - prioritize 3-word)
     candidates.sort(key=lambda x: (x['distance'], -x['word_count']))
     return candidates[0]
-

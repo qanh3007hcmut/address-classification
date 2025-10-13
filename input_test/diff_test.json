@@ -1,0 +1,707 @@
+[
+    {
+        "text": "357/28,Ng-T- Thuật,P1,Q3,TP.HồChíMinh.",
+        "expected": "/28, Ng-T- Thuật, phường 1, quận 3, thành phố Hồ Chí Minh ",
+        "processed": "/, Ng-T- Thuật, phường 1, quận 3, thành phố Hồ Chí Minh "
+    },
+    {
+        "text": "284DBis Ng Văn Giáo, P3, Mỹ Tho, T.Giang.",
+        "expected": "DBis Ng Văn Giáo, phường 3, Mỹ Tho, tỉnh Giang ",
+        "processed": "D Bis Ng Văn Giáo, phường 3, Mỹ Tho, tỉnh Giang "
+    },
+    {
+        "text": "59/12 Ng-B-Khiêm, Đa Kao Quận 1, TP. Hồ Chí Minh",
+        "expected": "/12 Ng-B-Khiêm, Đa Kao, Quận 1, thành phố Hồ Chí Minh",
+        "processed": "/ Ng-B-Khiêm, Đa Kao, Quận 1, thành phố Hồ Chí Minh"
+    },
+    {
+        "text": "T18,Cẩm Bình, Cẩm Phả, Quảng Ninh.",
+        "expected": "T18, Cẩm Bình, Cẩm Phả, Quảng Ninh ",
+        "processed": "tỉnh , Cẩm Bình, Cẩm Phả, Quảng Ninh "
+    },
+    {
+        "text": "D2, Thạnh Lợi, Vĩnh Thạnh Cần Thơ",
+        "expected": "D2, Thạnh Lợi, Vĩnh Thạnh Cần Thơ",
+        "processed": "D, Thạnh Lợi, Vĩnh Thạnh Cần Thơ"
+    },
+    {
+        "text": "CH F1614-HH2-Khu ĐTM Dương Nội, Yên Nghĩa, Hà Đông, Hà Nội",
+        "expected": "CH F-HH2-Khu Đ TM Dương Nội, Yên Nghĩa, Hà Đông, Hà Nội",
+        "processed": "CH F-HH -Khu Đ TM Dương Nội, Yên Nghĩa, Hà Đông, Hà Nội"
+    },
+    {
+        "text": "371/11 Thoại Ngọc Hầu Hiệp Tân, Tân Phú, TP. Hồ Chí Minh",
+        "expected": "/11 Thoại Ngọc Hầu Hiệp Tân, Tân Phú, thành phố Hồ Chí Minh",
+        "processed": "/ Thoại Ngọc Hầu Hiệp Tân, Tân Phú, thành phố Hồ Chí Minh"
+    },
+    {
+        "text": "Số 259/54/8, Tổ 28, KP1, Long Bình Tân, Biên Hòa, Đồng Nai.",
+        "expected": "Số /54/8, Tổ, KP1, Long Bình Tân, Biên Hòa, Đồng Nai ",
+        "processed": "Số / /, Tổ, KP1, Long Bình Tân, Biên Hòa, Đồng Nai "
+    },
+    {
+        "text": "154/4/81 Nguyễn - Phúc Chu, P15, TB, TP. Hồ Chí Minh",
+        "expected": "/4/81 Nguyễn - Phúc Chu, phường 15, TB, thành phố Hồ Chí Minh",
+        "processed": "/ / Nguyễn - Phúc Chu, phường 15, TB, thành phố Hồ Chí Minh"
+    },
+    {
+        "text": "489/24A/18 Huỳnh Văn Bánh Phường 13, Phú Nhuận, TP. Hồ Chí Minh",
+        "expected": "/24A/18 Huỳnh Văn Bánh, Phường 13, Phú Nhuận, thành phố Hồ Chí Minh",
+        "processed": "/24A/ Huỳnh Văn Bánh, Phường 13, Phú Nhuận, thành phố Hồ Chí Minh"
+    },
+    {
+        "text": "55/30 Nguyễn - Thượng Hiền,P5,BT, TP. Hồ Chí Minh",
+        "expected": "/30 Nguyễn - Thượng Hiền, phường 5, BT, thành phố Hồ Chí Minh",
+        "processed": "/ Nguyễn - Thượng Hiền, phường 5, BT, thành phố Hồ Chí Minh"
+    },
+    {
+        "text": "Tổ 5A2, KP5 TT. Trảng Bom, Trảng Bom, Đồng Nai",
+        "expected": "Tổ A2, KP5 thị trấn Trảng Bom, Trảng Bom, Đồng Nai",
+        "processed": "Tổ A, KP5 thị trấn Trảng Bom, Trảng Bom, Đồng Nai"
+    },
+    {
+        "text": "Số 43/7 Nguyễn Huệ, P.Sao Đỏ, TX.Chí Linh, Hải Dương",
+        "expected": "Số /7 Nguyễn Huệ, phường Sao Đỏ, thị xã Chí Linh, Hải Dương",
+        "processed": "Số / Nguyễn Huệ, phường Sao Đỏ, thị xã Chí Linh, Hải Dương"
+    },
+    {
+        "text": "55/21/1 Khu phố 2, Thới An Quận 12, TP. Hồ Chí Minh",
+        "expected": "/21/1 Khu phố, Thới An, Quận 12, thành phố Hồ Chí Minh",
+        "processed": "/ / Khu phố, Thới An, Quận 12, thành phố Hồ Chí Minh"
+    },
+    {
+        "text": "L10C12 Hẻm 90, Ng, Bỉnh Khiêm, TP. Rạch Giá, Kiên Giang",
+        "expected": "L10C12 Hẻm, Ng, Bỉnh Khiêm, thành phố Rạch Giá, Kiên Giang",
+        "processed": "L10C Hẻm, Ng, Bỉnh Khiêm, thành phố Rạch Giá, Kiên Giang"
+    },
+    {
+        "text": "14.5 Block A2, The Mansion, ĐS 7,KDC 13E,Ấp 5,PP,BC, TP.HCM",
+        "expected": " 5 Block A2, The Mansion, Đ S, KDC E, Ấp 5, PP, BC, thành phố hồ chí minh",
+        "processed": " 5 Block A, The Mansion, Đ S, KDC E, Ấp 5, PP, BC, thành phố hồ chí minh"
+    },
+    {
+        "text": "Số 10, Ngách 43/3, Ngõ 43 Nguyễn Ngọc Nại, Khương Mai, Thanh Xuân, Hà Nội.",
+        "expected": "Số, Ngách /3, Ngõ Nguyễn Ngọc Nại, Khương Mai, Thanh Xuân, Hà Nội ",
+        "processed": "Số, Ngách /, Ngõ Nguyễn Ngọc Nại, Khương Mai, Thanh Xuân, Hà Nội "
+    },
+    {
+        "text": "Số 1410 Đường 30/4, Phường 12, Thành phố Vũng Tàu, Bà Rịa - Vũng Tàu.",
+        "expected": "Số Đường /4, Phường 12, Thành phố Vũng Tàu, Bà Rịa - Vũng Tàu ",
+        "processed": "Số Đường /, Phường 12, Thành phố Vũng Tàu, Bà Rịa - Vũng Tàu "
+    },
+    {
+        "text": "7/3/4/16 Thành Thái Phường 14, Quận 10, TP. Hồ Chí Minh",
+        "expected": "/3/4/16 Thành Thái, Phường 14, Quận 10, thành phố Hồ Chí Minh",
+        "processed": "/ / / Thành Thái, Phường 14, Quận 10, thành phố Hồ Chí Minh"
+    },
+    {
+        "text": "820/12 Hậu Giang, Phường 12 Quận 6, TP. Hồ Chí Minh",
+        "expected": "/12 Hậu Giang, Phường 12, Quận 6, thành phố Hồ Chí Minh",
+        "processed": "/ Hậu Giang, Phường 12, Quận 6, thành phố Hồ Chí Minh"
+    },
+    {
+        "text": "X Bình Thuận H.Tây Son Tỉnh Bình Định",
+        "expected": "X Bình Thuận, huyện Tây Son, Tỉnh Bình Định",
+        "processed": "xã Bình Thuận, huyện Tây Son, Tỉnh Bình Định"
+    },
+    {
+        "text": " Chợ Chu, , T Thái Nguyên",
+        "expected": "",
+        "processed": "Chợ Chu, , tỉnh Thái Nguyên"
+    },
+    {
+        "text": " Tự Lạn, HuyệnViệt Yên, T Bắc Giang",
+        "expected": "",
+        "processed": "Tự Lạn, Huyện Việt Yên, tỉnh Bắc Giang"
+    },
+    {
+        "text": "X Vĩnh Lợi, Huyện Châu Thành, Tỉnhan Giang",
+        "expected": "X Vĩnh Lợi, Huyện Châu Thành, Tỉnhan Giang",
+        "processed": "xã Vĩnh Lợi, Huyện Châu Thành, Tỉnh an Giang"
+    },
+    {
+        "text": "Van Điểm, H hường TLín, Thành phốHa Nội",
+        "expected": "Van Điểm, H hường TLín, Thành phố Ha Nội",
+        "processed": "Van Điểm, huyện hường TLín, Thành phố Ha Nội"
+    },
+    {
+        "text": "XThạnh Đức, HGò Dầ6u, T Tây Ninh",
+        "expected": "XThạnh Đức, H Gò Dầu, T Tây Ninh",
+        "processed": "xã Thạnh Đức, huyện Gò Dầu, tỉnh Tây Ninh"
+    },
+    {
+        "text": "XãBù Gia Mập,,T Bình Phước",
+        "expected": "Xã Bù Gia Mập, , T Bình Phước",
+        "processed": "Xã Bù Gia Mập, , tỉnh Bình Phước"
+    },
+    {
+        "text": ", H Nam Trực, Nam Đị8nh",
+        "expected": ", H Nam Trực, Nam Định",
+        "processed": ", huyện Nam Trực, Nam Định"
+    },
+    {
+        "text": "XTân Thạnh, hAn Minh ",
+        "expected": "XTân Thạnh, h An Minh",
+        "processed": "xã Tân Thạnh, huyện An Minh"
+    },
+    {
+        "text": "X Cam Bình, Thành FhốCam Rah,  Khánh Hòa",
+        "expected": "X Cam Bình, Thành Fhố Cam Rah, Khánh Hòa",
+        "processed": "xã Cam Bình, Thành Fhố Cam Rah, Khánh Hòa"
+    },
+    {
+        "text": "XãQuỳn1 Lâm, H. Quỳnh Phụ,  Thai Bình",
+        "expected": "Xã Quỳn1 Lâm, huyện Quỳnh Phụ, Thai Bình",
+        "processed": "Xã Quỳn Lâm, huyện Quỳnh Phụ, Thai Bình"
+    },
+    {
+        "text": "Yên Bình, H fHữu Lũng, Lạng Sơn",
+        "expected": "Yên Bình, H f Hữu Lũng, Lạng Sơn",
+        "processed": "Yên Bình, huyện f Hữu Lũng, Lạng Sơn"
+    },
+    {
+        "text": " tPPhổ Yên Tỉnh Thái Nguyên",
+        "expected": "t PPhổ Yên, Tỉnh Thái Nguyên",
+        "processed": "tỉnh PPhổ Yên, Tỉnh Thái Nguyên"
+    },
+    {
+        "text": "XGia Hội,h.Văn Chấn,TỉnhYênKBái",
+        "expected": "XGia Hội, huyện Văn Chấn, Tỉnh Yên KBái",
+        "processed": "xã Gia Hội, huyện Văn Chấn, Tỉnh Yên KBái"
+    },
+    {
+        "text": "FHim Lam   Điện Biê",
+        "expected": "FHim Lam Điện Biê",
+        "processed": "phường Him Lam Điện Biê"
+    },
+    {
+        "text": "PHoà Quý Q.ngũ Hành sơn Đà Nẵng",
+        "expected": "PHoà Quý, quận ngũ Hành sơn Đà Nẵng",
+        "processed": "phường Hoà Quý, quận ngũ Hành sơn Đà Nẵng"
+    },
+    {
+        "text": "X Phong Quang, HKuyệnVị Xuyên, Tỉnh Hà Giang",
+        "expected": "X Phong Quang, H Kuyện Vị Xuyên, Tỉnh Hà Giang",
+        "processed": "xã Phong Quang, huyện Kuyện Vị Xuyên, Tỉnh Hà Giang"
+    },
+    {
+        "text": "X Quỳnh Nuyên,,T. Thái Bình",
+        "expected": "X Quỳnh Nuyên, , tỉnh Thái Bình",
+        "processed": "xã Quỳnh Nuyên, , tỉnh Thái Bình"
+    },
+    {
+        "text": "XVnh Hung, , T.Thanh Hóa",
+        "expected": "XVnh Hung, , tỉnh Thanh Hóa",
+        "processed": "xã Vnh Hung, , tỉnh Thanh Hóa"
+    },
+    {
+        "text": "X.Tăng Thanh, H Yên Thành, ",
+        "expected": "xã Tăng Thanh, H Yên Thành, ",
+        "processed": "xã Tăng Thanh, huyện Yên Thành, "
+    },
+    {
+        "text": "XãTrung Lập,  Vĩnh Bảo,7 ",
+        "expected": "Xã Trung Lập, Vĩnh Bảo, 7",
+        "processed": "Xã Trung Lập, Vĩnh Bảo, "
+    },
+    {
+        "text": "TT Qu7 Nhất,,Tỉnh Nam Định",
+        "expected": "thị trấn Qu7 Nhất, , Tỉnh Nam Định",
+        "processed": "thị trấn Qu Nhất, , Tỉnh Nam Định"
+    },
+    {
+        "text": "QX.Tân Hưng Tây, Ph8 Tân,",
+        "expected": "QX Tân Hưng Tây, Ph8 Tân, ",
+        "processed": "QX Tân Hưng Tây, Ph Tân, "
+    },
+    {
+        "text": "XAn Thủy Huyện Lệe Thủy TQuảng Bình",
+        "expected": "XAn Thủy, Huyện Lệe Thủy TQuảng Bình",
+        "processed": "xã An Thủy, Huyện Lệe Thủy TQuảng Bình"
+    },
+    {
+        "text": "XBình PhúN  Càng Long, T.u trà Vinh",
+        "expected": "XBình Phú N Càng Long, tỉnh u trà Vinh",
+        "processed": "xã Bình Phú N Càng Long, tỉnh u trà Vinh"
+    },
+    {
+        "text": "XHòa Bqc, HDi Linh, ",
+        "expected": "XHòa Bqc, H Di Linh, ",
+        "processed": "xã Hòa Bqc, huyện Di Linh, "
+    },
+    {
+        "text": " HBảo Lâm 8 Cao Bằng",
+        "expected": "HBảo Lâm Cao Bằng",
+        "processed": "huyện Bảo Lâm Cao Bằng"
+    },
+    {
+        "text": "X Sùng Phài T.P zai Châu T.Lai Châu",
+        "expected": "X Sùng Phài, thành phố zai Châu, tỉnh Lai Châu",
+        "processed": "xã Sùng Phài, thành phố zai Châu, tỉnh Lai Châu"
+    },
+    {
+        "text": "X Tân7 Thịnh  Yiên Bái T. yên Bái",
+        "expected": "X Tân7 Thịnh Yiên Bái, tỉnh yên Bái",
+        "processed": "xã Tân Thịnh Yiên Bái, tỉnh yên Bái"
+    },
+    {
+        "text": "XKHoan Sơn,TiênDu,Tỉnhbac Ninh",
+        "expected": "XKHoan Sơn, Tiên Du, Tỉnhbac Ninh",
+        "processed": "XKHoan Sơn, Tiên Du, Tỉnh bac Ninh"
+    },
+    {
+        "text": "Xã thanh Vĩnh Đông, HuyệnChâu Thành, TLong An",
+        "expected": "Xã thanh Vĩnh Đông, Huyện Châu Thành, T Long An",
+        "processed": "Xã thanh Vĩnh Đông, Huyện Châu Thành, tỉnh Long An"
+    },
+    {
+        "text": "F An lac Chí Linh Tỉnh Hải Dương",
+        "expected": "F An lac Chí Linh, Tỉnh Hải Dương",
+        "processed": "phường An lac Chí Linh, Tỉnh Hải Dương"
+    },
+    {
+        "text": ", HXuân Lộc,  Đồng Nai",
+        "expected": ", H Xuân Lộc, Đồng Nai",
+        "processed": ", huyện Xuân Lộc, Đồng Nai"
+    },
+    {
+        "text": "Phường Hiệ An, T.X.Kinh Môn, TỉnhHải Dương",
+        "expected": "Phường Hiệ An, tỉnh, xã Kinh Môn, Tỉnh Hải Dương",
+        "processed": "Phường Hiệ An, thị xã Kinh Môn, Tỉnh Hải Dương"
+    },
+    {
+        "text": " Chi Lăng,H Chi Lăng,Tỉnh Lạng5 Sơn",
+        "expected": "Chi Lăng, H Chi Lăng, Tỉnh Lạng5 Sơn",
+        "processed": "Chi Lăng, huyện Chi Lăng, Tỉnh Lạng Sơn"
+    },
+    {
+        "text": " Huyệntân biên T.TDy Ninh",
+        "expected": "Huyệntân biên, tỉnh TDy Ninh",
+        "processed": "Huyện tân biên, tỉnh TDy Ninh"
+    },
+    {
+        "text": "XãtrBung Thanh,,TThanh Hóa",
+        "expected": "Xãtr Bung Thanh, , T Thanh Hóa",
+        "processed": "Xã tr Bung Thanh, , tỉnh Thanh Hóa"
+    },
+    {
+        "text": "X Châu Thuận7  TNghệ An",
+        "expected": "X Châu Thuận7 TNghệ An",
+        "processed": "xã Châu Thuận TNghệ An"
+    },
+    {
+        "text": "P.Văn Đẩu, qKiến An, ThànhMphố Hải Phòng",
+        "expected": "phường Văn Đẩu, q Kiến An, Thành Mphố Hải Phòng",
+        "processed": "phường Văn Đẩu, quận Kiến An, Thành Mphố Hải Phòng"
+    },
+    {
+        "text": ",HPhú Bình, thái Nguyên",
+        "expected": ", H Phú Bình, thái Nguyên",
+        "processed": ", huyện Phú Bình, thái Nguyên"
+    },
+    {
+        "text": "Phường Hoài Hảo,T.Xã.Hoai Nhơn,TBình Đinh",
+        "expected": "Phường Hoài Hảo, tỉnh, Xã Hoai Nhơn, T Bình Đinh",
+        "processed": "Phường Hoài Hảo, thị xã Hoai Nhơn, tỉnh Bình Đinh"
+    },
+    {
+        "text": "P Ea Tam T.P Buôn Ma Thuột TỉnĐắk Llk",
+        "expected": "P Ea Tam, thành phố Buôn Ma Thuột Tỉn Đắk Llk",
+        "processed": "phường Ea Tam, thành phố Buôn Ma Thuột Tỉn Đắk Llk"
+    },
+    {
+        "text": "Tân An, H. Vĩnh Cửu, T Đồng Nai",
+        "expected": "Tân An, huyện Vĩnh Cửu, T Đồng Nai",
+        "processed": "Tân An, huyện Vĩnh Cửu, tỉnh Đồng Nai"
+    },
+    {
+        "text": "F Tân Dân, T.Xã.Nghi Sơn, TỉnhThanh Hóa",
+        "expected": "F Tân Dân, tỉnh, Xã Nghi Sơn, Tỉnh Thanh Hóa",
+        "processed": "phường Tân Dân, thị xã Nghi Sơn, Tỉnh Thanh Hóa"
+    },
+    {
+        "text": "XNam Cát, HuyệnNam đàn, ",
+        "expected": "XNam Cát, Huyện Nam đàn, ",
+        "processed": "xã Nam Cát, Huyện Nam đàn, "
+    },
+    {
+        "text": "X My Thành Bac, HuyệnCai Lậy, ",
+        "expected": "X My Thành Bac, Huyện Cai Lậy, ",
+        "processed": "xã My Thành Bac, Huyện Cai Lậy, "
+    },
+    {
+        "text": "XCư Drămb H.Krông Bông ",
+        "expected": "XCư Drămb, huyện Krông Bông",
+        "processed": "xã Cư Drămb, huyện Krông Bông"
+    },
+    {
+        "text": "X Bình Hi, , T.Quảcg Nam",
+        "expected": "X Bình Hi, , tỉnh Quảcg Nam",
+        "processed": "xã Bình Hi, , tỉnh Quảcg Nam"
+    },
+    {
+        "text": "XãNân Chính, H Ly Nhân, Tỉnh HaNam",
+        "expected": "Xã Nân Chính, H Ly Nhân, Tỉnh Ha Nam",
+        "processed": "Xã Nân Chính, huyện Ly Nhân, Tỉnh Ha Nam"
+    },
+    {
+        "text": "XTrung Nghĩa, , THưng Yên",
+        "expected": "XTrung Nghĩa, , T Hưng Yên",
+        "processed": "xã Trung Nghĩa, , tỉnh Hưng Yên"
+    },
+    {
+        "text": "PhườngHà Mãn, T.X.Thuận Thành, ",
+        "expected": "Phường Hà Mãn, tỉnh, xã Thuận Thành, ",
+        "processed": "Phường Hà Mãn, thị xã Thuận Thành, "
+    },
+    {
+        "text": "X Vân Du, , Phú Thọ",
+        "expected": "X Vân Du, , Phú Thọ",
+        "processed": "xã Vân Du, , Phú Thọ"
+    },
+    {
+        "text": "X.An Thuận, , TBến Tre",
+        "expected": "xã An Thuận, , T Bến Tre",
+        "processed": "xã An Thuận, , tỉnh Bến Tre"
+    },
+    {
+        "text": "Nghi Sơ6n, T.X. Nghi Sơn, Thhanh Hóa",
+        "expected": "Nghi Sơn, tỉnh, xã Nghi Sơn, Thhanh Hóa",
+        "processed": "Nghi Sơn, thị xã Nghi Sơn, Thhanh Hóa"
+    },
+    {
+        "text": "TT Hội An,,TAn Giang",
+        "expected": "thị trấn Hội An, , T An Giang",
+        "processed": "thị trấn Hội An, , tỉnh An Giang"
+    },
+    {
+        "text": "X. TErường Thịnh,h Ứng Hòa, Hà Nội",
+        "expected": "xã TErường Thịnh, h Ứng Hòa, Hà Nội",
+        "processed": "xã TErường Thịnh, huyện Ứng Hòa, Hà Nội"
+    },
+    {
+        "text": "Xã Tiến Nông,H Trệu Sơn,T. Thanh Hóa",
+        "expected": "Xã Tiến Nông, H Trệu Sơn, tỉnh Thanh Hóa",
+        "processed": "Xã Tiến Nông, huyện Trệu Sơn, tỉnh Thanh Hóa"
+    },
+    {
+        "text": ", HuyệnBình Sơn, TQuảng Ngãi",
+        "expected": ", Huyện Bình Sơn, T Quảng Ngãi",
+        "processed": ", Huyện Bình Sơn, tỉnh Quảng Ngãi"
+    },
+    {
+        "text": "X Tvực Đạo, , Nam Định",
+        "expected": "X Tvực Đạo, , Nam Định",
+        "processed": "xã Tvực Đạo, , Nam Định"
+    },
+    {
+        "text": "Thị trấn Tân Phong, , TThanh Hóa",
+        "expected": "Thị trấn Tân Phong, , T Thanh Hóa",
+        "processed": "Thị trấn Tân Phong, , tỉnh Thanh Hóa"
+    },
+    {
+        "text": "X. Lộc Thah,T0P Bảo lộc,TLâm Đông",
+        "expected": "xã Lộc Thah, T0P Bảo lộc, T Lâm Đông",
+        "processed": "xã Lộc Thah, T0P Bảo lộc, tỉnh Lâm Đông"
+    },
+    {
+        "text": "X Đương Hoa  TQuảng Ninh",
+        "expected": "X Đương Hoa TQuảng Ninh",
+        "processed": "xã Đương Hoa TQuảng Ninh"
+    },
+    {
+        "text": "XMiền Đồi,LaZc Sơn,",
+        "expected": "XMiền Đồi, La Zc Sơn, ",
+        "processed": "xã Miền Đồi, La Zc Sơn, "
+    },
+    {
+        "text": "X Phu Mãn   HN",
+        "expected": "X Phu Mãn hà nội",
+        "processed": "xã Phu Mãn hà nội"
+    },
+    {
+        "text": "X Mường Lèo H Sốp Cộp T Sơn ma",
+        "expected": "X Mường Lèo H Sốp Cộp T Sơn ma",
+        "processed": "xã Mường Lèo H Sốp Cộp T Sơn ma"
+    },
+    {
+        "text": "Xã Tam Xuân I Huyệnúi Thành Quảng Nam",
+        "expected": "Xã Tam Xuân I, Huyệnúi Thành Quảng Nam",
+        "processed": "Xã Tam Xuân I, Huyện úi Thành Quảng Nam"
+    },
+    {
+        "text": "J,Huyệnđô Lương,Tỉnh Nghệ An",
+        "expected": "J, Huyệnđô Lương, Tỉnh Nghệ An",
+        "processed": "J, Huyện đô Lương, Tỉnh Nghệ An"
+    },
+    {
+        "text": "XTâm Thsắng Cư Jút TỉnhĐắk Nông",
+        "expected": "XTâm Thsắng Cư Jút, Tỉnh Đắk Nông",
+        "processed": "xã Tâm Thsắng Cư Jút, Tỉnh Đắk Nông"
+    },
+    {
+        "text": "XLa Sơn H. Binh lục ",
+        "expected": "XLa Sơn, huyện Binh lục",
+        "processed": "xã La Sơn, huyện Binh lục"
+    },
+    {
+        "text": "F. Điện Nam Bắc, x TQuảng Nam",
+        "expected": "phường Điện Nam Bắc, x TQuảng Nam",
+        "processed": "phường Điện Nam Bắc,, xã TQuảng Nam"
+    },
+    {
+        "text": ",H Krông Năng,Đắk Lắk",
+        "expected": ", H Krông Năng, Đắk Lắk",
+        "processed": ", huyện Krông Năng, Đắk Lắk"
+    },
+    {
+        "text": "XTân Nghia  Di Linh Lâm ĐồnG",
+        "expected": "XTân Nghia Di Linh Lâm Đồn G",
+        "processed": "xã Tân Nghia Di Linh Lâm Đồn G"
+    },
+    {
+        "text": ",H Bắc Son,TỉnhLạng Son",
+        "expected": ", H Bắc Son, Tỉnh Lạng Son",
+        "processed": ", huyện Bắc Son, Tỉnh Lạng Son"
+    },
+    {
+        "text": "xTân Lập, H Vũ Thư, Thái bình",
+        "expected": "x Tân Lập, H Vũ Thư, Thái bình",
+        "processed": "xã Tân Lập, huyện Vũ Thư, Thái bình"
+    },
+    {
+        "text": "X Vĩnh Hanh, Châu Thành,An Giang",
+        "expected": "X Vĩnh Hanh, Châu Thành, An Giang",
+        "processed": "xã Vĩnh Hanh, Châu Thành, An Giang"
+    },
+    {
+        "text": "X Tân Thanh Huyện Lang Giang ",
+        "expected": "X Tân Thanh, Huyện Lang Giang",
+        "processed": "xã Tân Thanh, Huyện Lang Giang"
+    },
+    {
+        "text": "Xã Bản My H..Hoàng Su Phì T.Hà Giang",
+        "expected": "Xã Bản My, huyện  Hoàng Su Phì, tỉnh Hà Giang",
+        "processed": "Xã Bản My, huyện Hoàng Su Phì, tỉnh Hà Giang"
+    },
+    {
+        "text": "XãChơ Chun, H NamiGiang, T.Quảng Nam",
+        "expected": "Xã Chơ Chun, H Nami Giang, tỉnh Quảng Nam",
+        "processed": "Xã Chơ Chun, huyện Nami Giang, tỉnh Quảng Nam"
+    },
+    {
+        "text": "X.Vô Tranh, hLục Nam, Bắc Giang",
+        "expected": "xã Vô Tranh, h Lục Nam, Bắc Giang",
+        "processed": "xã Vô Tranh, huyện Lục Nam, Bắc Giang"
+    },
+    {
+        "text": "Bù Gia Map,H Bù Gia Mập,Bình Phước",
+        "expected": "Bù Gia Map, H Bù Gia Mập, Bình Phước",
+        "processed": "Bù Gia Map, huyện Bù Gia Mập, Bình Phước"
+    },
+    {
+        "text": "F. An Phú T.X. Tịnh Biên T.An Giang",
+        "expected": "phường An Phú, tỉnh, xã Tịnh Biên, tỉnh An Giang",
+        "processed": "phường An Phú, thị xã Tịnh Biên, tỉnh An Giang"
+    },
+    {
+        "text": "Xã 7Sơn Hà HuyệnNho Quan Tinh Ninh Bình",
+        "expected": "Xã Sơn Hà, Huyện Nho, quận Tinh Ninh Bình",
+        "processed": "Xã Sơn Hà, Huyện Nho Quan Tinh Ninh Bình"
+    },
+    {
+        "text": "Xã C.hâu Minh, HHiệp Ha, TBắc Giang",
+        "expected": "Xã C hâu Minh, H Hiệp Ha, T Bắc Giang",
+        "processed": "Xã C hâu Minh, huyện Hiệp Ha, tỉnh Bắc Giang"
+    },
+    {
+        "text": "Diên Thạnh,,T Khabnh Hòa",
+        "expected": "Diên Thạnh, , T Khabnh Hòa",
+        "processed": "Diên Thạnh, , tỉnh Khabnh Hòa"
+    },
+    {
+        "text": "X.Điện Hồng,Thị xã Điện Bàn,t Quảng Nam",
+        "expected": "xã Điện Hồng, Thị xã Điện Bàn, t Quảng Nam",
+        "processed": "xã Điện Hồng, Thị xã Điện Bàn, tỉnh Quảng Nam"
+    },
+    {
+        "text": ", H Duy Xuyên, T.Quảng Nam",
+        "expected": ", H Duy Xuyên, tỉnh Quảng Nam",
+        "processed": ", huyện Duy Xuyên, tỉnh Quảng Nam"
+    },
+    {
+        "text": "Đứ Lợi,H Mộ Đức,TỉnhQuản Ngãi",
+        "expected": "Đứ Lợi, H Mộ Đức, Tỉnh Quản Ngãi",
+        "processed": "Đứ Lợi, huyện Mộ Đức, Tỉnh Quản Ngãi"
+    },
+    {
+        "text": "PhườngNguyễn Trãi, T.P Kon Tum, T Kon Tum",
+        "expected": "Phường Nguyễn Trãi, thành phố Kon Tum, T Kon Tum",
+        "processed": "Phường Nguyễn Trãi, thành phố Kon Tum, tỉnh Kon Tum"
+    },
+    {
+        "text": "X Song Lộc H.Châu Thành ",
+        "expected": "X Song Lộc, huyện Châu Thành",
+        "processed": "xã Song Lộc, huyện Châu Thành"
+    },
+    {
+        "text": "Lộc Châu,TPBảo Lộc,T Lâm Đồng",
+        "expected": "Lộc Châu, TPBảo Lộc, T Lâm Đồng",
+        "processed": "Lộc Châu, TPBảo Lộc, tỉnh Lâm Đồng"
+    },
+    {
+        "text": "X Lương Nghĩa,H. Long Mỹ,T. Hậu giangg",
+        "expected": "X Lương Nghĩa, huyện Long Mỹ, tỉnh Hậu giangg",
+        "processed": "xã Lương Nghĩa, huyện Long Mỹ, tỉnh Hậu giangg"
+    },
+    {
+        "text": "X Tây Yên, H.An Biên, TKiên Giang",
+        "expected": "X Tây Yên, huyện An Biên, T Kiên Giang",
+        "processed": "xã Tây Yên, huyện An Biên, tỉnh Kiên Giang"
+    },
+    {
+        "text": "XPhước Vĩnh Đông  Cần Giuộc T. Long An",
+        "expected": "XPhước Vĩnh Đông Cần Giuộc, tỉnh Long An",
+        "processed": "xã Phước Vĩnh Đông Cần Giuộc, tỉnh Long An"
+    },
+    {
+        "text": "XThạch Xuâ,Thạch Hà,T. Hà Tĩnh",
+        "expected": "XThạch Xuâ, Thạch Hà, tỉnh Hà Tĩnh",
+        "processed": "xã Thạch Xuâ, Thạch Hà, tỉnh Hà Tĩnh"
+    },
+    {
+        "text": " Quận 1 T.P H.C.Minh",
+        "expected": "Quận 1, thành phố, huyện C Minh",
+        "processed": "Quận 1, thành phố , huyện C Minh"
+    },
+    {
+        "text": "XDuy Hải  TQuảng Nam",
+        "expected": "XDuy Hải TQuảng Nam",
+        "processed": "xã Duy Hải TQuảng Nam"
+    },
+    {
+        "text": "oã Bnh Ngọc,T.Phố Tuy Hoà,Tỉnhphú Yên",
+        "expected": "oã Bnh Ngọc, thành phố Tuy Hoà, Tỉnhphú Yên",
+        "processed": "oã Bnh Ngọc, thành phố Tuy Hoà, Tỉnh phú Yên"
+    },
+    {
+        "text": "X An Đức, Huyên Ninh Giang, T.Hải Dương",
+        "expected": "X An Đức, Huyên Ninh Giang, tỉnh Hải Dương",
+        "processed": "xã An Đức, Huyên Ninh Giang, tỉnh Hải Dương"
+    },
+    {
+        "text": "XTrung Kiên,,Tỉnh Vĩnh Phuúc",
+        "expected": "XTrung Kiên, , Tỉnh Vĩnh Phuúc",
+        "processed": "xã Trung Kiên, , Tỉnh Vĩnh Phuúc"
+    },
+    {
+        "text": "X. Đông Lâm2, Huyen Tiền Hải, T.Thái Bình",
+        "expected": "xã Đông Lâm2, huyện Tiền Hải, tỉnh Thái Bình",
+        "processed": "xã Đông Lâm, huyện Tiền Hải, tỉnh Thái Bình"
+    },
+    {
+        "text": "XQuỳnh Hôi, Quỳnh Phụ, Thái Bình",
+        "expected": "XQuỳnh Hôi, Quỳnh Phụ, Thái Bình",
+        "processed": "xã Quỳnh Hôi, Quỳnh Phụ, Thái Bình"
+    },
+    {
+        "text": " Yn phú, HBắc Mê, TỉnhV Hà giang",
+        "expected": "Yn phú, H Bắc Mê, Tỉnh V Hà giang",
+        "processed": "Yn phú, huyện Bắc Mê, Tỉnh V Hà giang"
+    },
+    {
+        "text": "Xia Ake, HuyệnPhú Thiện, TGia Lai",
+        "expected": "Xia Ake, Huyện Phú Thiện, T Gia Lai",
+        "processed": "Xia Ake, Huyện Phú Thiện, tỉnh Gia Lai"
+    },
+    {
+        "text": " H Ea H'leo T Đắk Lắk",
+        "expected": "H Ea H'leo T Đắk Lắk",
+        "processed": "huyện Ea H'leo T Đắk Lắk"
+    },
+    {
+        "text": " Thái Ha, HBa Vì, T.pHNội",
+        "expected": "Thái Ha, H Ba Vì, thành phố HNội",
+        "processed": "Thái Ha, huyện Ba Vì, thành phố HNội"
+    },
+    {
+        "text": "XHuy Hạ,  phù Yêu, T.Sơn La",
+        "expected": "XHuy Hạ, phù Yêu, tỉnh Sơn La",
+        "processed": "xã Huy Hạ, phù Yêu, tỉnh Sơn La"
+    },
+    {
+        "text": "TTr.Quỳnh Côi,HQuỳnh Phụ,TThai Bình",
+        "expected": "thị trấn Quỳnh Côi, H Quỳnh Phụ, T Thai Bình",
+        "processed": "tỉnh Tr Quỳnh Côi, huyện Quỳnh Phụ, tỉnh Thai Bình"
+    },
+    {
+        "text": "TTĐức An Huyện Đắk SongTỉnhĐắk Nông",
+        "expected": "TTĐức An, Huyện Đắk Song, Tỉnh Đắk Nông",
+        "processed": "tỉnh TĐức An, Huyện Đắk Song, Tỉnh Đắk Nông"
+    },
+    {
+        "text": "X Đoàn đào,4 Phù Cừ,T.Hưng Yên",
+        "expected": "X Đoàn đào, 4 Phù Cừ, tỉnh Hưng Yên",
+        "processed": "xã Đoàn đào, Phù Cừ, tỉnh Hưng Yên"
+    },
+    {
+        "text": ",H.Hoài ân,TBình Dịnh",
+        "expected": ", huyện Hoài ân, T Bình Dịnh",
+        "processed": ", huyện Hoài ân, tỉnh Bình Dịnh"
+    },
+    {
+        "text": " Điên Hải, Đông Hải, T bạc Liêu",
+        "expected": "Điên Hải, Đông Hải, T bạc Liêu",
+        "processed": "Điên Hải, Đông Hải, tỉnh bạc Liêu"
+    },
+    {
+        "text": ", H KBang, Gia Lai",
+        "expected": ", H KBang, Gia Lai",
+        "processed": ", huyện KBang, Gia Lai"
+    },
+    {
+        "text": "X. Thanh Phongjc , Tỉnhthanh hóa",
+        "expected": "xã Thanh Phongjc, Tỉnhthanh hóa",
+        "processed": "xã Thanh Phongjc, Tỉnh thanh hóa"
+    },
+    {
+        "text": "xã Bình Trung,,TLạng Son",
+        "expected": "xã Bình Trung, , T Lạng Son",
+        "processed": "xã Bình Trung, , tỉnh Lạng Son"
+    },
+    {
+        "text": "Xã Tân Lĩnh, H.Lục Yên, TYên Bái",
+        "expected": "Xã Tân Lĩnh, huyện Lục Yên, T Yên Bái",
+        "processed": "Xã Tân Lĩnh, huyện Lục Yên, tỉnh Yên Bái"
+    },
+    {
+        "text": "P Thủy Châu,T.X. hươngThủy,Thừa.t.Huế",
+        "expected": "P Thủy Châu, tỉnh, xã hương Thủy, Thừa thiên huế",
+        "processed": "phường Thủy Châu, thị xã hương Thủy, Thừa thiên huế"
+    },
+    {
+        "text": "X. Quế Minh,HZuyện Quế Sơn,TỉnhQuảng Nam",
+        "expected": "xã Quế Minh, H Zuyện Quế Sơn, Tỉnh Quảng Nam",
+        "processed": "xã Quế Minh, huyện Zuyện Quế Sơn, Tỉnh Quảng Nam"
+    },
+    {
+        "text": "Phường Phú Mỹ, Thà6nh phố Thủ Dầu Một, TBình Dương",
+        "expected": "Phường Phú Mỹ, Thành phố Thủ Dầu Một, T Bình Dương",
+        "processed": "Phường Phú Mỹ, Thành phố Thủ Dầu Một, tỉnh Bình Dương"
+    },
+    {
+        "text": ",Lệ Thủy,T quảng BìnKh",
+        "expected": ", Lệ Thủy, T quảng Bìn Kh",
+        "processed": ", Lệ Thủy, tỉnh quảng Bìn Kh"
+    },
+    {
+        "text": "F Tân bình  dĩ An ",
+        "expected": "F Tân bình dĩ An",
+        "processed": "phường Tân bình dĩ An"
+    },
+    {
+        "text": "XãCôn Lôn,H Na Hang,TỉnhC Tuyên.Quang",
+        "expected": "Xã Côn Lôn, H Na Hang, Tỉnh C Tuyên Quang",
+        "processed": "Xã Côn Lôn, huyện Na Hang, Tỉnh C Tuyên Quang"
+    }
+]

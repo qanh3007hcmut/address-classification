@@ -3,7 +3,7 @@ from utils.fuzz import fuzz_pipeline_v2
 from utils.preprocess import to_normalized_no_comma_deleted as to_normalized
 from utils.preprocess import to_diacritics
 from utils.address_matcher import find_best_match_advanced
-from utils.bktree import bktree_find, bktree_find_v1
+from utils.bktree import bktree_find
 
 ABBRE_DICT = {
     "provinces" : ["t", "p"],
@@ -125,7 +125,7 @@ def classify_trie_diacritics(
     automaton: dict[str, dict[str, Any]],
     address_type: Literal["provinces", "districts", "wards"],
     last_output: tuple[str, tuple[int | str, str, str, str]] | None = None
-) -> list[Any]:
+):
     _, last_address = last_output or (None, None)
     normalized_input = to_normalized(raw_input)
     diacritics_input = to_diacritics(normalized_input)
@@ -133,93 +133,9 @@ def classify_trie_diacritics(
     processed_output = [process_trie_output(raw_input, address_type, out, last_output) for out in output]
     processed_output = fuzz_pipeline_v2(processed_output)
     if processed_output and processed_output[0]:
-        return processed_output
+        return processed_output[0]
 
-    return []
-    
-def window_slide(inputs : list[str], min_size = 2, max_size = 3):
-    slides = []
-    if len(inputs) >= min_size:
-        slides.append(inputs[-min_size:])
-        
-    if len(inputs) >= max_size:
-        slides.append(inputs[-max_size:])
-        
-    return slides
-    
-def spelling_detect(
-    input : str,
-    bktree : dict[str, Any],
-    address_type: Literal["provinces", "districts", "wards"],
-    last_output: tuple[str, tuple[int | str, str, str, str]] | None = None
-):
-    
-    actual_output = None
-    input_to_split = input
-    input_used = input
-    index_found = len(input_to_split)
-    slides_diff = 0
-    if last_output:
-        input_used = last_output[0]
-        input_to_split = last_output[0].split(",")[0]
-        index_found = int(last_output[1][0]) - len(last_output[1][3]) - 1
-        if index_found < 0:
-            return None
-        
-    inputs = input_to_split.split()   
-    for slide in window_slide(inputs, 2, 3):
-        combined_input = " ".join(slide)
-        output = find_best_match_advanced(combined_input, address_type, bktree)    
-        if output:
-            actual_output = output
-            index_found -= len(combined_input) - len(output["query"])
-            slides_diff = len(slide) - output["word_count"]
-            break
-        
-        if combined_input[0] in ABBRE_DICT[address_type]:
-            output = find_best_match_advanced(combined_input[1:], address_type, bktree)    
-            if output:
-                actual_output = output
-                index_found -= len(combined_input) - len(output["query"])
-                slides_diff = len(slide) - output["word_count"]
-                break
-    if not actual_output:
-        return None
-    
-    # print(address_type, "-"*5, "spelling check")  
-    count = actual_output['word_count']
-    check_1_token = inputs[-(count + 1 + slides_diff)] if len(inputs) > count + 1 else None
-    check_1_token_second = inputs[-(count + 2 + slides_diff)] if len(inputs) > count + 2 else None
-    check_2_token = (
-        f"{check_1_token_second} {check_1_token}"
-        if check_1_token and check_1_token_second
-        else None
-    )
-    
-    detected = actual_output["query"]
-    prefix = ""
-    
-    if check_1_token and check_1_token in PREFIX_DICT[address_type]:
-        detected = check_1_token + " " + actual_output["query"]
-        prefix = check_1_token
-    elif check_2_token and check_2_token in PREFIX_DICT[address_type]:
-        detected = check_2_token + " " + actual_output["query"]
-        prefix = check_2_token            
-    elif check_1_token and check_1_token_second and check_1_token_second in PREFIX_DICT[address_type]:
-        detected = check_1_token_second + " " + actual_output["query"]
-        prefix = check_1_token_second
-        full_output = (index_found, actual_output["match"], prefix, detected)
-        start = index_found - len(detected) - 1 - 2 - len(check_1_token)
-        raw_input = input_used[0:start] + "," + input_used[start:]
-        return raw_input, full_output
-    
-    full_output = (index_found, actual_output["match"], prefix, detected)
-    start = index_found - len(detected) - 1 
-    if start > 0:
-        raw_input = input_used[0:start] + "," + input_used[start:]
-    else: raw_input = input_used
-    
-    return raw_input, full_output
+    return None
 
 def bktree_spelling_check(input : str,
     bktree : dict[str, Any],
@@ -236,66 +152,42 @@ def bktree_spelling_check(input : str,
         input_to_split = last_output[0].split(",")[0]
         index_found = int(last_output[1][0]) - len(last_output[1][3]) - 1
         if index_found < 0:
-            return []
+            return None
         
     inputs = input_to_split.split()
     inputs = " ".join(inputs[-min(5, len(inputs)):])
-    outputs = bktree_find(inputs, bktree[address_type], prefix_dict, to_normalized, address_type)
-    if not outputs:
-        return []
+    output = bktree_find(inputs, bktree[address_type], prefix_dict, to_normalized, address_type)
+    if not output:
+        return None
     
-    results = []
-    for output in outputs:
-        idx_diff, actual_output, prefix, detected_input = output
-        idx_found : int = index_found - idx_diff
-        start = idx_found - len(detected_input) - 1
-        if start > 0:
-            raw_input = input_used[0:start] + "," + input_used[start:]
-        else: raw_input = input_used
-        results.append((raw_input, (idx_found, actual_output, prefix, detected_input)))
+    idx_diff, actual_output, prefix, detected_input = output
+    idx_found : int = index_found - idx_diff
+    start = idx_found - len(detected_input) - 1
+    raw_input = input_used[0:start] + "," + input_used[start:]
     
-    return results
+    return raw_input, (idx_found, actual_output, prefix, detected_input)
 
 def combine_diacritics_bktree(
     input: str,
     automaton: dict[str, dict[str, Any]],
-    bktree: dict[str, Any],
-    prefix_dict: dict[str, list[str]],
+    bktree : dict[str, Any],
+    prefix_dict : dict[str, list[str]],
     address_type: Literal["provinces", "districts", "wards"],
     last_output: tuple[str, tuple[int | str, str, str, str]] | None = None
 ):
     output_trie_diacritics = classify_trie_diacritics(input, automaton, address_type, last_output)
     output_spelling_check = bktree_spelling_check(input, bktree, prefix_dict, address_type, last_output)
-
-    # Nếu cả hai đều rỗng
-    if not output_trie_diacritics and not output_spelling_check:
-        return None
-
-    # Gom nhóm theo detected_output
-    groups: dict[str, list[tuple[str, tuple[int | str, str, str, str]]]] = {}
-    for output in output_trie_diacritics + output_spelling_check:
-        _, (_, detected_output, _, _) = output
-        groups.setdefault(detected_output, []).append(output)
-
-    # --- 1️⃣ Ưu tiên độ dài nhất ---
-    all_outputs = output_trie_diacritics + output_spelling_check
-    key_fn = lambda x: (len(x[1][-1]), len(x[1][1]))
-    max_key = max(all_outputs, key=key_fn)
-    max_len = key_fn(max_key)
-    longest_outputs = [x for x in all_outputs if key_fn(x) == max_len]
-
-    # --- 2️⃣ Nếu trong các kết quả dài nhất có nhóm xuất hiện ở cả hai nguồn ---
-    for output in longest_outputs:
-        _, (_, detected_output, _, _) = output
-        group = groups[detected_output]
-        if any(item in output_trie_diacritics for item in group) and \
-           any(item in output_spelling_check for item in group):
-            # Chọn nhóm trùng đầu tiên có cùng độ dài
-            return max(group, key=lambda x: len(x[1][-1]))
-
-    # --- 3️⃣ Nếu không có nhóm trùng thì chọn output dài nhất ---
-    return longest_outputs[0]
-   
+    if not output_trie_diacritics:
+        return output_spelling_check
+    
+    if not output_spelling_check:
+        return output_trie_diacritics
+    
+    if (len(output_trie_diacritics[1][1]) + len(output_trie_diacritics[1][3])) > (len(output_spelling_check[1][1]) + len(output_spelling_check[1][3])):
+        return output_trie_diacritics
+    else: 
+        return output_spelling_check
+    
 def full_pipeline(
     raw_input: str,
     automaton: dict[str, dict[str, Any]],

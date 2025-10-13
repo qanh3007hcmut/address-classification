@@ -7,14 +7,24 @@ ALIAS_SINGLE_MAP = {
     "thành phố": ["tp", "tpho"],
     "thị trấn": ["tt", "ttr","thi tran"],
     "thị xã": ["tx", "tỉnh xã"],
-    "phường": ["p", "phuong", "phưng"],
-    "huyện": ["h", "huyen"],
-    "tỉnh": ["t", "tnh"],
-    "quận": ["q", "quan"],
-    "xã": ["x", "xa"],
+    "phường": ["phuong", "phưng"],
+    "huyện": ["huyen"],
+    "tỉnh": ["tnh"],
+    "quận": ["quan"],
+    "xã": ["xa"],
+}
+
+ALIAS_ABBREV_MAP = {
+    "phường": ["p"],
+    "huyện": ["h"],
+    "tỉnh": ["t"],
+    "quận": ["q"],
+    "xã": ["x"],
 }
 
 ALIAS_MULTI_MAP = {
+    "thiên huế": ["tỉnh huế"], 
+    "thừa thiên huế": ["tỉnh tỉnh huyện"], 
     "thành phố": ["tỉnh phố", "tỉnh phô", "tỉnh pho", "tỉnh phường"], 
     "thị trấn": ["thi tran"],
     "thị xã": ["tỉnh xã"],
@@ -54,6 +64,12 @@ def build_single_rules(alias : dict) :
         pattern_dict[" " + replacement + " "] = r'(?:(^|,\s*|\s+))\b(?:' + '|'.join(map(re.escape, aliases)) + r')\b(\.|\s|$)'
     return pattern_dict
 
+def build_abbreviation_rules(alias : dict) :
+    pattern_dict = {}
+    for replacement, aliases in alias.items():
+        pattern_dict[" " + replacement + " "] = r'(?:(^|,\s*|\s+))\b(?:' + '|'.join(map(re.escape, aliases)) + r')\b(\.|$)'
+    return pattern_dict
+
 def build_multi_rules(alias : dict) :
     pattern_dict = {}
     for replacement, aliases in alias.items():
@@ -67,10 +83,15 @@ def replace_alias(text : str):
     result = re.sub(r'(?:^|\s)f\.(?=\s|$)', ' phường ', result, flags=re.IGNORECASE)
     
     single_rules = build_single_rules(ALIAS_SINGLE_MAP)
+    abbreviation_rules = build_abbreviation_rules(ALIAS_ABBREV_MAP)
     multi_rules = build_multi_rules(ALIAS_MULTI_MAP)
     rules_place = build_single_rules(ALIAS_PLACE)
     
     for replace, pattern in single_rules.items():
+        result = re.sub(pattern, replace, result, flags=re.IGNORECASE)
+        result = re.sub(r"\s+", " ", result)         
+    
+    for replace, pattern in abbreviation_rules.items():
         result = re.sub(pattern, replace, result, flags=re.IGNORECASE)
         result = re.sub(r"\s+", " ", result)              
             
