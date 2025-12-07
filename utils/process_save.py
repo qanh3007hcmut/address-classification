@@ -123,7 +123,7 @@ import re
 
 ALIAS_LONG_MAP = {
     "thành phố hồ chí minh": ["tphcm"],
-    "thừa thiên huế": ["tỉnh tỉnh h"],
+    "thừa thiên huế": ["tỉnh tỉnh h", "tỉnh tỉnh huyện"],
     "thiên huế": ["tỉnh huế"],
     "thành phố": ["tp", "tpho", "tỉnh phố", "tỉnh phô", "tỉnh pho", "tỉnh p", "tỉnh phường"],
     "thị trấn": ["tt", "ttr", "thi tran", "tỉnh tỉnh"],
@@ -177,7 +177,7 @@ ALIAS_LONG_REGEX_MAP = {
 
 ALIAS_PLACE = {
     "thừa thiên huế": ["tth"],
-    "hồ chí minh": ["hcm"],
+    "hồ chí minh": ["hcm", "h. c. minh"],
     "hà nội": ["hn"],
     "đống đa": ["đ. đa"],
 }

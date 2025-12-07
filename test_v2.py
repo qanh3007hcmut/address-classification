@@ -41,12 +41,13 @@ SKIP_INDEXES = {
 }
 
 OUTPUT_ERROR = {
-    229, 286, 309, 313, 314, 259, 287, 305
+    229, 286, 314, 259, 287, 305
 }
 
 UNWANTED = {
     211, 249,
-    639 # chịu Đông Thanh vs Đông Thạnh 
+    639, # chịu Đông Thanh vs Đông Thạnh 
+    554, # sơn hv -> Sơn Hội trong khi có Sơn Hà
 }
 
 # SKIP_INDEXES.update(OUTPUT_ERROR)

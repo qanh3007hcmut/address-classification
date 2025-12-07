@@ -203,7 +203,10 @@ def build_bk_trees(data : dict[str , list[Any]], prefix_dict : dict[str, list[st
 def fuzzy_prefix(word: str, prefix_dict: dict[str, list[str]], address_type : Literal["provinces", "districts", "wards"]):
     all_prefixes = prefix_dict[address_type]
     best, score, _ = process.extractOne(word, all_prefixes, scorer=fuzz.ratio) # pyright: ignore[reportGeneralTypeIssues]
-    return (word, best) if score > 80 else None
+    if len(best) == 2 and score >= 50 :
+        best, score, _ = process.extractOne(word, all_prefixes, scorer=fuzz.partial_token_ratio) # pyright: ignore[reportGeneralTypeIssues]
+        return (word, best, score) if score > 60 else None
+    return (word, best, score) if score > 80 else None
 
 def split_text_for_address(text : str):
     """
@@ -211,8 +214,13 @@ def split_text_for_address(text : str):
     """
     words = text.split()
     phrases = []
+    if len(words) >= 4:
+        phrases.append( " ".join(words[-4:]))
+    
     if len(words) >= 3:
         phrases.append( " ".join(words[-3:]))
+    if len(words) >= 4:
+        phrases.append( " ".join(words[-4:-1]))
         
     if len(words) >= 2:
         phrases.append(" ".join(words[-2:]))
@@ -236,6 +244,41 @@ def split_text_for_prefix(text : str, result : tuple[int, str, str, int]):
     if idx < 0:
         return []
     return split_text_for_address(text[:idx])
+
+
+def prefix_checker(
+    results,
+    text : str,
+    prefix_dict : dict[str, list[str]],
+    address_type : Literal["provinces", "districts", "wards"]
+): 
+    prefix_outputs = []
+    for result in results:
+        words_for_prefix_check = split_text_for_prefix(text, result)
+        raw, prefix, _ = prefix_helper(words_for_prefix_check, prefix_dict, address_type)
+        prefix_outputs.append((result[0], result[1], prefix, f"{raw} {result[2]}".strip()))
+        
+    return prefix_outputs
+
+def prefix_helper(
+    words : list[str], 
+    prefix_dict : dict[str, list[str]],
+    address_type
+):
+    best_prefix = ("", "", 0)  # (raw, prefix, score)
+    for word in words:
+        output_prefix = fuzzy_prefix(word, prefix_dict, address_type)
+        if not output_prefix:
+            continue
+        
+        raw, prefix, score = output_prefix
+        if score > best_prefix[2]:
+            best_prefix = (raw, prefix, score)
+            
+        if score >= 95:
+            break
+
+    return best_prefix
 
 def bktree_find(
         text : str, 
@@ -267,20 +310,8 @@ def bktree_find(
 
     results = list(unique.values())
     results = sorted(results, key=lambda x: (x[-1], -len(x[-2])))
-
-    bktree_outputs = []
-    for result in results:
-        words_for_prefix_check = split_text_for_prefix(text, result)
-        prefix = ""
-        raw = ""
-        for word in words_for_prefix_check:
-            output_prefix = fuzzy_prefix(word, prefix_dict, address_type)
-            if output_prefix:
-                raw, prefix = output_prefix   
-                break
-        bktree_outputs.append((result[0], result[1], prefix, f"{raw} {result[2]}".strip()))
     
-    return bktree_outputs
+    return prefix_checker(results, text, prefix_dict, address_type)
         
             
 def split_text_for_address_v1(text : str, prefix : tuple[str, str]):

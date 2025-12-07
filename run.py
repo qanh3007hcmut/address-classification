@@ -74,7 +74,7 @@ tests = [
         
 import time
 start = time.perf_counter_ns()
-id = 521
+id = 462
 raw_input = test_inputs[id - 1]
 input = preprocess_input(raw_input)
 print("RAW_INPUT", "-"*5, raw_input)

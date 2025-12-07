@@ -1,3 +1,5 @@
+from rapidfuzz import fuzz
+import Levenshtein
 from utils.data import get_data, get_prefix_dict
 from utils.decorators import track_time_ns
 from utils.fuzz import fuzz_pipeline_v2
@@ -6,7 +8,7 @@ from utils.trie import build_all_automaton
 # from utils.input import preprocess_input
 from utils.input_v2 import preprocess_input, test_pattern
 from input_test.export_sample import export_sample, export_diff
-from utils.bktree import bktree_find_v1, build_bk_trees, bktree_find, fuzzy_prefix
+from utils.bktree import bktree_find_v1, build_bk_trees, bktree_find, fuzzy_prefix, prefix_helper
 from utils.trie_pipeline_v2 import PREFIX_DICT, bktree_spelling_check
 
 DATA = get_data()
@@ -70,11 +72,11 @@ test_not_pass = [
 # export_diff(preprocess_input)
 
 
-input = "HNội"
-
-output = (BKTREE["provinces"].dynamic_phrase_search(input , to_normalized))
-# output = bktree_find_v1(input, BKTREE["provinces"], PREFIX_DICT, to_normalized, "provinces")
-# print(output)
-# print(BKTREE["wards"].progressive_search(input, to_normalized))
-print(fuzzy_prefix("đức thành", PREFIX["full"]["normalized"], "provinces"))
+input = "phong cnốc "
+# output = bktree_spelling_check(input, BKTREE, PREFIX["full"]["normalized"], "districts", ('thành phố phan rang tháp lhàm, ninh thuận', (40, 'Ninh Thuận', '', 'ninh thuận')))
+# output = (BKTREE["wards"].dynamic_phrase_search(input , to_normalized))
+output = prefix_helper(["th ị xã"], PREFIX_DICT, "districts")
+# output = bktree_find(input, BKTREE["districts"], PREFIX_DICT, to_normalized, "districts")
 print(output)
+# print(BKTREE["wards"].progressive_search(input, to_normalized))
+# print(fuzzy_prefix("oã", PREFIX["full"]["normalized"], "wards"))

@@ -29,8 +29,7 @@ def build_automaton(
             variants[get_abbreviation(prefix)] = get_abbreviation(prefix) + word
 
         if word.isdigit() or word in ["I", "III", "IV", "V", "VII"]:
-            variants.pop("")
-            
+            variants.pop("")            
 
         for k, v in variants.items():
 
@@ -40,11 +39,15 @@ def build_automaton(
 
             pref_normalized = to_normalized(k)
             pref_diacritics = to_diacritics(pref_normalized)
-            pref_nospace = to_nospace(pref_diacritics)
+            pref_nospace = to_nospace(pref_diacritics)               
 
-            # if var_normalized != var_diacritics:
-            # if not word.isdigit():
-            A_normalized.add_word(var_normalized, (pref_normalized, [word], len(var_normalized)))
+            if  word not in ["I", "III", "IV", "V", "VII"] and \
+                (
+                    k != "" or (
+                        k == "" and to_normalized(word) != to_diacritics(to_normalized(word))
+                    )
+                ):
+                A_normalized.add_word(var_normalized, (pref_normalized, [word], len(var_normalized)))
             
             if var_diacritics in A_diacritics:
                 pref, words, l = A_diacritics.get(var_diacritics)
